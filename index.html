@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo</title>
+  <meta name="description" content="W.C Pintura LTDA — Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --brand: #0F3460;
+      --brand-mid: #1A4A7A;
+      --brand-light: #E6EEF8;
+      --brand-dark: #091F3A;
+      --accent: #D4A843;
+      --accent-light: #FFF8E7;
+      --text: #1A1A1A;
+      --text-sec: #555;
+      --text-muted: #999;
+      --bg: #FAFAF7;
+      --white: #FFFFFF;
+      --border: #E0DDD5;
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'DM Serif Display', serif;
+    }
+
+    html { scroll-behavior: auto; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    .cursor {
+      width: 20px; height: 20px;
+      border: 2px solid var(--brand);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transition: width 0.3s, height 0.3s, border-color 0.3s, background 0.3s;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+    .cursor.hover {
+      width: 50px; height: 50px;
+      background: rgba(15,52,96,0.15);
+      border-color: var(--accent);
+    }
+    .cursor-dot {
+      width: 6px; height: 6px;
+      background: var(--brand);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+    @media (max-width: 768px) {
+      .cursor, .cursor-dot { display: none; }
+      body { cursor: auto; }
+    }
+
+    /* ── LOADER ── */
+    .loader {
+      position: fixed;
+      inset: 0;
+      background: var(--brand-dark);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .loader-logo {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--white);
+      opacity: 0;
+    }
+    .loader-logo span { color: var(--accent); }
+    .loader-bar {
+      width: 200px;
+      height: 3px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loader-fill {
+      width: 0%;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav.scrolled {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-sec);
+      font-size: 0.88rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--brand);
+      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta-link {
+      background: var(--brand) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: all 0.3s !important;
+    }
+    .nav-cta-link::after { display: none !important; }
+    .nav-cta-link:hover { background: var(--brand-dark) !important; transform: translateY(-2px); }
+    .hamburger {
+      display: none;
+      background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 6px;
+      z-index: 101;
+    }
+    .hamburger span {
+      display: block; width: 26px; height: 2px;
+      background: var(--text);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      overflow: hidden;
+    }
+    .paint-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0;
+    }
+    .paint-blob-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(15,52,96,0.12) 0%, transparent 70%);
+      top: -20%; right: -10%;
+    }
+    .paint-blob-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(212,168,67,0.1) 0%, transparent 70%);
+      bottom: -10%; left: -10%;
+    }
+    .paint-blob-3 {
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(15,52,96,0.08) 0%, transparent 70%);
+      top: 40%; left: 30%;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand-light);
+      border: 1px solid rgba(15,52,96,0.15);
+      padding: 0.4rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--brand);
+      margin-bottom: 2rem;
+      opacity: 0;
+    }
+    .badge-dot {
+      width: 8px; height: 8px;
+      background: var(--brand);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.5); }
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 .line { display: block; overflow: hidden; }
+    .hero h1 .line-inner {
+      display: block;
+      transform: translateY(110%);
+    }
+    .hero h1 .highlight {
+      color: var(--brand);
+      position: relative;
+      display: inline-block;
+    }
+    .highlight-stroke {
+      position: absolute;
+      bottom: 0; left: -5%; right: -5%;
+      height: 12px;
+      z-index: -1;
+      overflow: visible;
+    }
+    .highlight-stroke path {
+      stroke: var(--accent);
+      stroke-width: 10;
+      fill: none;
+      stroke-linecap: round;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+    }
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--text-sec);
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      opacity: 0;
+    }
+    .hero-buttons {
+      display: flex; gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.95rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      cursor: none;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+    }
+    .btn::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.15);
+      transform: translateX(-110%) skewX(-15deg);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn:hover::before { transform: translateX(110%) skewX(-15deg); }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary {
+      background: var(--brand);
+      color: var(--white);
+    }
+    .btn-primary:hover { box-shadow: 0 8px 30px rgba(15,52,96,0.35); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--brand); color: var(--brand); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--white);
+      font-size: 1.1rem;
+      padding: 1.1rem 2.8rem;
+    }
+    .btn-whatsapp:hover { box-shadow: 0 8px 30px rgba(37,211,102,0.35); }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      padding: 3rem 0;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0 2.5rem;
+      white-space: nowrap;
+    }
+    .marquee-item .num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--brand);
+    }
+    .marquee-item .txt {
+      font-size: 0.9rem;
+      color: var(--text-sec);
+      font-weight: 500;
+    }
+    .marquee-divider {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin: 0 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 7rem 2rem; }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--brand);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: var(--text-sec);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* ── SERVICES ── */
+    .services-section { background: var(--bg); }
+    .services-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: none;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      border-color: var(--brand);
+    }
+    .service-card-accent {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand), var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-card:hover .service-card-accent { transform: scaleX(1); }
+    .service-icon-wrap {
+      width: 56px; height: 56px;
+      background: var(--brand-light);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s;
+    }
+    .service-card:hover .service-icon-wrap {
+      background: var(--brand);
+      transform: rotate(-5deg) scale(1.05);
+    }
+    .service-icon-wrap svg {
+      width: 26px; height: 26px;
+      color: var(--brand);
+      transition: color 0.4s;
+    }
+    .service-card:hover .service-icon-wrap svg { color: var(--white); }
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .service-card p {
+      color: var(--text-sec);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .service-card .card-arrow {
+      display: flex; align-items: center; gap: 0.4rem;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--brand);
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.4s;
+    }
+    .service-card:hover .card-arrow { opacity: 1; transform: translateX(0); }
+
+    /* ── DIFERENCIAIS ── */
+    .diff-section {
+      background: var(--brand-dark);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .diff-section .section-tag { color: var(--accent); }
+    .diff-section .section-title { color: var(--white); }
+    .diff-section .section-sub { color: rgba(255,255,255,0.6); }
+    .diff-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .diff-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: none;
+    }
+    .diff-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+      transform: translateY(-4px);
+    }
+    .diff-card-icon {
+      width: 48px; height: 48px;
+      background: rgba(212,168,67,0.15);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+    .diff-card-icon svg { width: 24px; height: 24px; color: var(--accent); }
+    .diff-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .diff-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* bg paint drips */
+    .paint-drips {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 80px;
+      overflow: visible;
+    }
+    .paint-drips svg { width: 100%; height: auto; display: block; }
+
+    /* ── PROCESS ── */
+    .process-section { background: var(--white); }
+    .process-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+    .process-track {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .process-line {
+      position: absolute;
+      left: 32px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .process-line-fill {
+      width: 100%;
+      height: 0%;
+      background: var(--brand);
+      transition: height 0.1s;
+    }
+    .process-step {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 2rem 0;
+      position: relative;
+    }
+    .step-marker {
+      width: 64px; height: 64px;
+      min-width: 64px;
+      background: var(--brand-light);
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--brand);
+      position: relative;
+      z-index: 2;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .process-step.active .step-marker {
+      background: var(--brand);
+      color: var(--white);
+      transform: scale(1.1);
+      box-shadow: 0 0 0 8px rgba(15,52,96,0.12);
+    }
+    .step-content h4 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .step-content p {
+      color: var(--text-sec);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: var(--bg); overflow: hidden; }
+    .test-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .test-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      transition: all 0.4s;
+      cursor: none;
+    }
+    .test-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
+    .test-quote-mark {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--brand-light);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .test-stars { color: var(--accent); font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 1rem; }
+    .test-card blockquote {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--text-sec);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .test-author { display: flex; align-items: center; gap: 0.8rem; }
+    .test-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--brand-light);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--brand);
+    }
+    .test-author-info strong { font-size: 0.9rem; display: block; }
+    .test-author-info span { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .cta-content { position: relative; z-index: 2; }
+    .cta-section .section-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+    .cta-section .section-sub {
+      margin: 0 auto 2.5rem;
+      max-width: 480px;
+    }
+    .cta-bg-text {
+      position: absolute;
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 15vw, 14rem);
+      color: rgba(15,52,96,0.04);
+      white-space: nowrap;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.7);
+      padding: 4rem 2rem 1.5rem;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+    .footer-brand-name {
+      margin-bottom: 0.8rem;
+    }
+    .footer-brand-name img {
+      height: 50px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .footer p { font-size: 0.88rem; line-height: 1.7; }
+    .footer h4 {
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .footer ul { list-style: none; }
+    .footer ul li { margin-bottom: 0.5rem; }
+    .footer ul a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.3s;
+    }
+    .footer ul a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom a { color: var(--accent); text-decoration: none; }
+
+    /* ── WHATSAPP FAB ── */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 99;
+      text-decoration: none;
+      cursor: none;
+    }
+    .fab-inner {
+      width: 60px; height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .fab-inner::before {
+      content: '';
+      position: absolute; inset: -4px;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.2);
+      animation: fabPulse 2s ease-in-out infinite;
+    }
+    @keyframes fabPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0; }
+    }
+    .whatsapp-fab:hover .fab-inner {
+      transform: scale(1.1) rotate(-10deg);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+    }
+    .fab-inner svg { width: 28px; height: 28px; fill: var(--white); position: relative; z-index: 1; }
+    .fab-tooltip {
+      position: absolute;
+      right: 72px; top: 50%;
+      transform: translateY(-50%) translateX(8px);
+      background: var(--white);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+    .whatsapp-fab:hover .fab-tooltip { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .diff-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        background: var(--white);
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.3rem; }
+      .hamburger { display: flex; }
+      .hero { padding: 7rem 1.5rem 3rem; }
+      .services-grid, .diff-grid, .test-grid { grid-template-columns: 1fr; }
+      .services-header { text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .section { padding: 5rem 1.5rem; }
+      .process-step { gap: 1.2rem; }
+      .step-marker { width: 48px; height: 48px; min-width: 48px; font-size: 1rem; }
+      .process-line { left: 23px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo"><img src="logo-wc.png" alt="W.C Pintura LTDA" style="height: 80px; width: auto; filter: brightness(0) invert(1);"></div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><img src="logo-wc.png" alt="W.C Pintura LTDA"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato" class="nav-cta-link">Orçamento grátis</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="paint-blob paint-blob-1"></div>
+      <div class="paint-blob paint-blob-2"></div>
+      <div class="paint-blob paint-blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Atendendo ABC Paulista e Grande SP
+      </div>
+      <h1>
+        <span class="line"><span class="line-inner">Seu imóvel</span></span>
+        <span class="line"><span class="line-inner"><span class="highlight">renovado<svg class="highlight-stroke" viewBox="0 0 280 18"><path d="M2 15 C60 2, 140 2, 278 12"/></svg></span> com</span></span>
+        <span class="line"><span class="line-inner">qualidade que se vê</span></span>
+      </h1>
+      <p class="hero-sub">Pintura predial e residencial com acabamento impecável, equipe treinada e prazo respeitado. Resultado garantido desde a primeira demão.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir orçamento grátis
+        </a>
+        <a href="#servicos" class="btn btn-outline">Conhecer serviços ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STATS -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="num">500+</span><span class="txt">Projetos concluídos</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">15</span><span class="txt">Anos de experiência</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">98%</span><span class="txt">Clientes satisfeitos</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">ABC</span><span class="txt">Paulista e Grande SP</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">500+</span><span class="txt">Projetos concluídos</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">15</span><span class="txt">Anos de experiência</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">98%</span><span class="txt">Clientes satisfeitos</span></div>
+      <div class="marquee-divider"></div>
+      <div class="marquee-item"><span class="num">ABC</span><span class="txt">Paulista e Grande SP</span></div>
+      <div class="marquee-divider"></div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section services-section" id="servicos">
+    <div class="services-header">
+      <div>
+        <span class="section-tag">Serviços</span>
+        <h2 class="section-title">Soluções completas<br>em pintura</h2>
+        <p class="section-sub">Do planejamento à entrega final, cada detalhe é pensado para transformar seu espaço.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-tilt>
+        <div class="service-card-accent"></div>
+        <div class="service-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z"/></svg>
+        </div>
+        <h3>Pintura predial</h3>
+        <p>Fachadas, áreas comuns, garagens e halls. Equipamentos próprios e equipe certificada para trabalho em altura.</p>
+        <div class="card-arrow">Saiba mais →</div>
+      </div>
+      <div class="service-card" data-tilt>
+        <div class="service-card-accent"></div>
+        <div class="service-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"/></svg>
+        </div>
+        <h3>Pintura residencial</h3>
+        <p>Casas e apartamentos com cores sob medida, tintas de primeira linha e acabamento perfeito.</p>
+        <div class="card-arrow">Saiba mais →</div>
+      </div>
+      <div class="service-card" data-tilt>
+        <div class="service-card-accent"></div>
+        <div class="service-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
+        </div>
+        <h3>Textura e efeitos</h3>
+        <p>Grafiato, textura rústica, cimento queimado e marmorizado. Paredes que contam uma história.</p>
+        <div class="card-arrow">Saiba mais →</div>
+      </div>
+      <div class="service-card" data-tilt>
+        <div class="service-card-accent"></div>
+        <div class="service-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.652 3.126 1.08-6.293-4.574-4.459 6.318-.918L11.42 1.136l2.828 5.49 6.318.918-4.574 4.46 1.08 6.292-5.652-3.126z"/></svg>
+        </div>
+        <h3>Preparação e tratamento</h3>
+        <p>Limpeza, massa corrida, selador e impermeabilização. A base certa para um resultado duradouro.</p>
+        <div class="card-arrow">Saiba mais →</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="section diff-section" id="diferenciais">
+    <div class="paint-drips">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 L0,40 Q120,80 240,40 Q300,20 360,40 Q400,55 440,40 Q500,15 560,40 Q620,65 680,40 Q740,10 800,40 Q860,70 920,40 Q960,20 1000,40 Q1060,60 1120,40 Q1180,15 1240,40 Q1300,60 1360,40 L1440,40 L1440,0 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+    <div class="diff-header">
+      <span class="section-tag">Por que a W.C Pintura?</span>
+      <h2 class="section-title">O que nos diferencia</h2>
+      <p class="section-sub" style="margin: 0 auto;">Mais do que pintar, entregamos tranquilidade e resultado.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h4>Garantia de serviço</h4>
+        <p>Cobertura pós-entrega para você ficar 100% tranquilo com o resultado final.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h4>Prazo respeitado</h4>
+        <p>Cronograma definido e cumprido. Sem surpresas, sem atrasos desnecessários.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+        </div>
+        <h4>Equipe própria e treinada</h4>
+        <p>Profissionais registrados, com EPIs e capacitação contínua em técnicas modernas.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
+        </div>
+        <h4>Orçamento transparente</h4>
+        <p>Preço fechado na visita técnica. Sem custos ocultos ou reajustes surpresa.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+        </div>
+        <h4>Limpeza inclusa</h4>
+        <p>Ao final, deixamos tudo limpo. Você só precisa curtir o resultado novo.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+        </div>
+        <h4>Tintas de primeira linha</h4>
+        <p>Suvinil, Coral e Sherwin-Williams. Durabilidade e cor fiel por muito mais tempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section process-section" id="processo">
+    <div class="process-header">
+      <span class="section-tag">Como funciona</span>
+      <h2 class="section-title">Do contato à entrega</h2>
+      <p class="section-sub" style="margin: 0 auto;">Processo simples e organizado pra você não se preocupar com nada.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-line"><div class="process-line-fill" id="processLineFill"></div></div>
+      <div class="process-step" data-step="1">
+        <div class="step-marker">1</div>
+        <div class="step-content">
+          <h4>Contato pelo WhatsApp</h4>
+          <p>Você nos chama, conta o que precisa e já recebe uma estimativa inicial. Rápido e sem burocracia.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="2">
+        <div class="step-marker">2</div>
+        <div class="step-content">
+          <h4>Visita técnica gratuita</h4>
+          <p>Nossa equipe vai até o local, avalia as condições e entrega um orçamento detalhado sem compromisso.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="3">
+        <div class="step-marker">3</div>
+        <div class="step-content">
+          <h4>Execução profissional</h4>
+          <p>Preparação completa, pintura com técnica e acabamento impecável. Acompanhamento diário do progresso.</p>
+        </div>
+      </div>
+      <div class="process-step" data-step="4">
+        <div class="step-marker">4</div>
+        <div class="step-content">
+          <h4>Entrega com garantia</h4>
+          <p>Vistoria final com você, limpeza completa do ambiente e garantia por escrito do serviço.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section testimonials-section" id="depoimentos">
+    <div class="test-header">
+      <span class="section-tag">Depoimentos</span>
+      <h2 class="section-title">Quem confiou, aprovou</h2>
+      <p class="section-sub" style="margin: 0 auto;">A satisfação dos nossos clientes fala por si.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card" data-tilt>
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"Pintaram todo o prédio em 3 semanas, sem atraso nenhum. Ficou perfeito e o preço foi justo. Já indicamos pra outros condomínios."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">CM</div>
+          <div class="test-author-info">
+            <strong>Carlos M.</strong>
+            <span>Síndico — Santo André</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card" data-tilt>
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"A equipe foi super educada e organizada. Minha sala ficou irreconhecível — no melhor sentido. Recomendo demais."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">FL</div>
+          <div class="test-author-info">
+            <strong>Fernanda L.</strong>
+            <span>Proprietária — São Bernardo</span>
+          </div>
+        </div>
+      </div>
+      <div class="test-card" data-tilt>
+        <div class="test-quote-mark">"</div>
+        <div class="test-stars">★★★★★</div>
+        <blockquote>"Fizeram a textura da fachada do meu comércio e o resultado ficou acima do esperado. Profissionais de verdade."</blockquote>
+        <div class="test-author">
+          <div class="test-avatar">RS</div>
+          <div class="test-author-info">
+            <strong>Roberto S.</strong>
+            <span>Empresário — São Caetano</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contato">
+    <div class="cta-bg-text">PINTURA</div>
+    <div class="cta-content">
+      <span class="section-tag">Orçamento grátis</span>
+      <h2 class="section-title">Pronto para renovar<br>seu imóvel?</h2>
+      <p class="section-sub" style="margin: 0 auto 2.5rem;">Solicite agora seu orçamento gratuito e sem compromisso pelo WhatsApp. Respondemos em minutos.</p>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20pintura." class="btn btn-whatsapp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name"><img src="logo-wc.png" alt="W.C Pintura LTDA"></div>
+        <p>Transformando ambientes com qualidade e dedicação há mais de 15 anos no ABC Paulista e Grande São Paulo.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5511999999999">WhatsApp</a></li>
+          <li><a href="mailto:contato@wcpintura.com.br">contato@wcpintura.com.br</a></li>
+          <li><a href="#">@wcpintura</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 W.C Pintura LTDA. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://bgdev.com.br">BG Dev</a></p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20um%20orçamento." class="whatsapp-fab" aria-label="WhatsApp" id="fab">
+    <div class="fab-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <div class="fab-tooltip">Fale conosco!</div>
+  </a>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ── CUSTOM CURSOR ──
+    const cursor = document.getElementById('cursor');
+    const cursorDot = document.getElementById('cursorDot');
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      gsap.to(cursorDot, { x: mouseX, y: mouseY, duration: 0.1 });
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    document.querySelectorAll('a, button, .service-card, .diff-card, .test-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+
+    // ── LOADER ──
+    const loader = document.getElementById('loader');
+    const loaderFill = document.getElementById('loaderFill');
+    const loaderLogo = document.querySelector('.loader-logo');
+
+    gsap.to(loaderLogo, { opacity: 1, duration: 0.6, delay: 0.2 });
+    gsap.to(loaderFill, {
+      width: '100%', duration: 1.8, delay: 0.4,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        gsap.to(loader, {
+          yPercent: -100,
+          duration: 0.8,
+          ease: 'power3.inOut',
+          onComplete: () => {
+            loader.style.display = 'none';
+            animateHero();
+          }
+        });
+      }
+    });
+
+    // ── HERO ANIMATION ──
+    function animateHero() {
+      const tl = gsap.timeline();
+
+      tl.to('.paint-blob', {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        stagger: 0.2,
+        ease: 'power2.out'
+      })
+      .to('.hero-badge', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=1')
+      .to('.line-inner', {
+        y: 0,
+        duration: 1,
+        stagger: 0.12,
+        ease: 'power3.out'
+      }, '-=0.6')
+      .to('.highlight-stroke path', {
+        strokeDashoffset: 0,
+        duration: 0.8,
+        ease: 'power2.out'
+      }, '-=0.3')
+      .to('.hero-sub', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=0.4')
+      .to('.hero-buttons', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=0.4');
+
+      // Floating blobs
+      gsap.to('.paint-blob-1', {
+        x: 30, y: 20,
+        duration: 6,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+      gsap.to('.paint-blob-2', {
+        x: -25, y: -15,
+        duration: 7,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+      gsap.to('.paint-blob-3', {
+        x: 20, y: 25,
+        duration: 8,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
+    }
+
+    // ── NAV SCROLL ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ── MOBILE MENU ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ── SCROLL ANIMATIONS ──
+
+    // Services cards
+    gsap.from('.service-card', {
+      scrollTrigger: { trigger: '.services-grid', start: 'top 80%' },
+      y: 60, opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+
+    // Services header
+    gsap.from('.services-header > div > *', {
+      scrollTrigger: { trigger: '.services-header', start: 'top 85%' },
+      y: 40, opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    // Diff cards
+    gsap.from('.diff-card', {
+      scrollTrigger: { trigger: '.diff-grid', start: 'top 80%' },
+      y: 50, opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    // Diff header
+    gsap.from('.diff-header > *', {
+      scrollTrigger: { trigger: '.diff-header', start: 'top 85%' },
+      y: 40, opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    // Process steps
+    document.querySelectorAll('.process-step').forEach((step, i) => {
+      gsap.from(step, {
+        scrollTrigger: {
+          trigger: step,
+          start: 'top 80%',
+          onEnter: () => step.classList.add('active')
+        },
+        x: -40, opacity: 0,
+        duration: 0.7,
+        delay: i * 0.15,
+        ease: 'power3.out'
+      });
+    });
+
+    // Process line fill
+    ScrollTrigger.create({
+      trigger: '.process-track',
+      start: 'top 70%',
+      end: 'bottom 50%',
+      scrub: 1,
+      onUpdate: (self) => {
+        document.getElementById('processLineFill').style.height = (self.progress * 100) + '%';
+      }
+    });
+
+    // Process header
+    gsap.from('.process-header > *', {
+      scrollTrigger: { trigger: '.process-header', start: 'top 85%' },
+      y: 40, opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    // Testimonials
+    gsap.from('.test-card', {
+      scrollTrigger: { trigger: '.test-grid', start: 'top 80%' },
+      y: 50, opacity: 0,
+      rotation: 3,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.test-header > *', {
+      scrollTrigger: { trigger: '.test-header', start: 'top 85%' },
+      y: 40, opacity: 0,
+      duration: 0.7,
+      stagger: 0.1,
+      ease: 'power3.out'
+    });
+
+    // CTA
+    gsap.from('.cta-content > *', {
+      scrollTrigger: { trigger: '.cta-content', start: 'top 80%' },
+      y: 40, opacity: 0,
+      duration: 0.8,
+      stagger: 0.12,
+      ease: 'power3.out'
+    });
+
+    // CTA bg text parallax
+    gsap.to('.cta-bg-text', {
+      scrollTrigger: {
+        trigger: '.cta-section',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1
+      },
+      x: -100,
+      ease: 'none'
+    });
+
+    // ── TILT EFFECT ──
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      });
+    });
+
+    // ── MAGNETIC BUTTONS ──
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(btn, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: 'power2.out' });
+      });
+      btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+      });
+    });
+
+    // ── FAB ENTRANCE ──
+    gsap.from('#fab', {
+      scale: 0, opacity: 0,
+      duration: 0.6,
+      delay: 3,
+      ease: 'back.out(1.7)'
+    });
+
+    // ── SMOOTH SCROLL ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          gsap.to(window, {
+            scrollTo: { y: target, offsetY: 72 },
+            duration: 1,
+            ease: 'power3.inOut'
+          });
+        }
+      });
+    });
+
+    // ── FOOTER REVEAL ──
+    gsap.from('.footer-inner > div', {
+      scrollTrigger: { trigger: '.footer', start: 'top 90%' },
+      y: 30, opacity: 0,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: 'power3.out'
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+</body>
+</html>
