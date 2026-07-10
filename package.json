@@ -1,0 +1,21 @@
+{
+  "name": "wc-pintura-ltda",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page institucional da W.C Pintura LTDA — pintura predial e residencial.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.4",
+    "vite": "^8.1.4"
+  }
+}

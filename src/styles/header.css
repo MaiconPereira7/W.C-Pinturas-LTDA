@@ -1,0 +1,164 @@
+/* ── HEADER / NAV ── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 2rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav.scrolled {
+  /* Sem backdrop-filter de propósito: essa propriedade transforma o .nav no
+     "containing block" dos seus descendentes position:fixed (o menu mobile
+     em tela cheia), fazendo o overlay branco encolher para a altura do
+     header em vez de cobrir a viewport inteira quando o menu abre com a
+     página já rolada. */
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92px;
+}
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.nav-logo img {
+  height: 64px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  transition: opacity 0.3s;
+}
+/* Duas variantes da marca (sem caixa/fundo): dourada sobre o hero escuro,
+   azul-marinho quando o header vira sólido/branco ao rolar a página. */
+.nav-logo-light {
+  display: none;
+}
+.nav.scrolled .nav-logo-dark {
+  display: none;
+}
+.nav.scrolled .nav-logo-light {
+  display: block;
+}
+.nav.scrolled .nav-logo img {
+  filter: none;
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  font-size: 0.88rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav.scrolled .nav-links a {
+  color: var(--text-sec);
+  text-shadow: none;
+}
+.nav.scrolled .nav-links a:hover {
+  color: var(--brand);
+}
+.nav-cta-link {
+  background: var(--accent) !important;
+  color: var(--brand-dark) !important;
+  text-shadow: none !important;
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  transition: all 0.3s !important;
+}
+.nav-cta-link::after {
+  display: none !important;
+}
+.nav-cta-link:hover {
+  background: var(--white) !important;
+  transform: translateY(-2px);
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 101;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+.nav.scrolled .hamburger span,
+.hamburger.active span {
+  background: var(--text);
+  box-shadow: none;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    color: var(--text-sec);
+    font-size: 1.3rem;
+    text-shadow: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

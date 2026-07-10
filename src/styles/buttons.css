@@ -1,0 +1,81 @@
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 2.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-110%) skewX(-15deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover::before {
+  transform: translateX(110%) skewX(-15deg);
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn-primary {
+  background: var(--brand);
+  color: var(--white);
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 30px rgba(15, 52, 96, 0.35);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+.btn-accent {
+  background: var(--accent);
+  color: var(--brand-dark);
+}
+.btn-accent:hover {
+  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.4);
+}
+.btn-outline-light {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+.btn-outline-light:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 1.1rem 2.8rem;
+}
+.btn-whatsapp:hover {
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+}
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}

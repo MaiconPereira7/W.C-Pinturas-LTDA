@@ -1,0 +1,113 @@
+/* ── SERVIÇOS ── */
+.services-section {
+  background: var(--bg);
+}
+.services-header {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border-color: var(--brand);
+}
+.service-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.service-card:hover .service-card-accent {
+  transform: scaleX(1);
+}
+.service-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: var(--brand-light);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s;
+}
+.service-card:hover .service-icon-wrap {
+  background: var(--brand);
+  transform: rotate(-5deg) scale(1.05);
+}
+.service-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  color: var(--brand);
+  transition: color 0.4s;
+}
+.service-card:hover .service-icon-wrap svg {
+  color: var(--white);
+}
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.service-card p {
+  color: var(--text-sec);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.service-card .card-arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s;
+}
+.service-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-header {
+    text-align: center;
+  }
+}

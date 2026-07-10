@@ -1,1807 +1,1038 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo</title>
-  <meta name="description" content="W.C Pintura LTDA — Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0F3460">
-  <link rel="canonical" href="https://www.wcpintura.com.br/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo</title>
+    <meta
+      name="description"
+      content="W.C Pintura LTDA — Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F3460" />
+    <link rel="canonical" href="https://www.wcpintura.com.br/" />
 
-  <!-- Open Graph / WhatsApp / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo">
-  <meta property="og:description" content="Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp.">
-  <meta property="og:image" content="https://www.wcpintura.com.br/logo-wc.jpg">
-  <meta property="og:url" content="https://www.wcpintura.com.br/">
+    <!-- Open Graph / WhatsApp / Facebook / Instagram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="W.C Pintura LTDA" />
+    <meta
+      property="og:title"
+      content="W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo"
+    />
+    <meta
+      property="og:description"
+      content="Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp."
+    />
+    <meta property="og:image" content="https://www.wcpintura.com.br/images/og-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fachada de imóvel pintada pela W.C Pintura LTDA" />
+    <meta property="og:url" content="https://www.wcpintura.com.br/" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo">
-  <meta name="twitter:description" content="Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp.">
-  <meta name="twitter:image" content="https://www.wcpintura.com.br/logo-wc.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="W.C Pintura LTDA | Pintura Predial e Residencial em São Paulo"
+    />
+    <meta
+      name="twitter:description"
+      content="Especialistas em pintura predial e residencial no ABC Paulista e Grande São Paulo. Orçamento grátis pelo WhatsApp."
+    />
+    <meta name="twitter:image" content="https://www.wcpintura.com.br/images/og-cover.jpg" />
+    <meta name="twitter:image:alt" content="Fachada de imóvel pintada pela W.C Pintura LTDA" />
 
-  <link rel="icon" href="logo-wc.jpg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="logo-wc.jpg">
+    <link rel="icon" href="/images/logo-wc.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="/images/logo-wc.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Preload do LCP (imagem de fundo do hero) — evita descoberta tardia via CSS -->
-  <link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high" media="(min-width: 769px)">
-  <link rel="preload" as="image" href="images/hero-bg-mobile.jpg" fetchpriority="high" media="(max-width: 768px)">
+    <!-- Preload do LCP (imagem de fundo do hero) — evita descoberta tardia via CSS.
+         Aponta para o WebP (mesmo formato que o image-set() em hero.css efetivamente
+         carrega em navegadores modernos) para não baixar o JPG duas vezes. -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg.webp"
+      type="image/webp"
+      fetchpriority="high"
+      media="(min-width: 769px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg-mobile.webp"
+      type="image/webp"
+      fetchpriority="high"
+      media="(max-width: 768px)"
+    />
 
-  <!-- SUBSTITUA os dados abaixo pelos dados reais da empresa antes de publicar -->
-  <script type="application/ld+json" id="business-schema">
-  {
-    "@context": "https://schema.org",
-    "@type": "PaintingContractor",
-    "name": "W.C Pintura LTDA",
-    "image": "https://www.wcpintura.com.br/logo-wc.jpg",
-    "url": "https://www.wcpintura.com.br/",
-    "telephone": "+5511999999999",
-    "email": "contato@wcpintura.com.br",
-    "areaServed": ["ABC Paulista", "Grande São Paulo"],
-    "priceRange": "$$",
-    "sameAs": []
-  }
-  </script>
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --brand: #0F3460;
-      --brand-mid: #1A4A7A;
-      --brand-light: #E6EEF8;
-      --brand-dark: #091F3A;
-      --accent: #D4A843;
-      --accent-light: #FFF8E7;
-      --text: #1A1A1A;
-      --text-sec: #555;
-      --text-muted: #767676;
-      --bg: #FAFAF7;
-      --white: #FFFFFF;
-      --border: #E0DDD5;
-      --font-body: 'Inter', sans-serif;
-      --font-display: 'DM Serif Display', serif;
-    }
-
-    html { scroll-behavior: auto; }
-    body {
-      font-family: var(--font-body);
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* Cursor customizado só é ativado via JS (custom-cursor-active), e nunca
-       quando o usuário pediu "reduzir movimento" — assim o cursor do sistema
-       nunca some caso o JS falhe ao carregar. */
-    body.custom-cursor-active,
-    body.custom-cursor-active .btn,
-    body.custom-cursor-active .service-card,
-    body.custom-cursor-active .diff-card,
-    body.custom-cursor-active .test-card,
-    body.custom-cursor-active .whatsapp-fab {
-      cursor: none;
-    }
-
-    /* ── CUSTOM CURSOR ── */
-    .cursor {
-      width: 20px; height: 20px;
-      border: 2px solid var(--brand);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      transition: width 0.3s, height 0.3s, border-color 0.3s, background 0.3s;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: difference;
-    }
-    .cursor.hover {
-      width: 50px; height: 50px;
-      background: rgba(15,52,96,0.15);
-      border-color: var(--accent);
-    }
-    .cursor-dot {
-      width: 6px; height: 6px;
-      background: var(--brand);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-    }
-    @media (max-width: 768px) {
-      .cursor, .cursor-dot { display: none; }
-      body { cursor: auto; }
-    }
-
-    /* ── LOADER ── */
-    .loader {
-      position: fixed;
-      inset: 0;
-      background: var(--brand-dark);
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .loader-logo {
-      opacity: 0;
-      background: var(--white);
-      padding: 0.9rem 1.4rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-      display: flex;
-    }
-    .loader-bar {
-      width: 200px;
-      height: 3px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .loader-fill {
-      width: 0%;
-      height: 100%;
-      background: var(--accent);
-      border-radius: 10px;
-    }
-
-    /* ── NAV ── */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 0 2rem;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav.scrolled {
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 92px;
-    }
-    .nav-logo {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      background: var(--white);
-      padding: 0.5rem 0.9rem;
-      border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    }
-    .nav-logo img {
-      height: 72px;
-      width: auto;
-      display: block;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-      align-items: center;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: rgba(255,255,255,0.92);
-      text-shadow: 0 1px 4px rgba(0,0,0,0.35);
-      font-size: 0.88rem;
-      font-weight: 500;
-      position: relative;
-      transition: color 0.3s;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 2px;
-      background: var(--accent);
-      transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav.scrolled .nav-links a { color: var(--text-sec); text-shadow: none; }
-    .nav.scrolled .nav-links a:hover { color: var(--brand); }
-    .nav-cta-link {
-      background: var(--accent) !important;
-      color: var(--brand-dark) !important;
-      text-shadow: none !important;
-      padding: 0.55rem 1.4rem;
-      border-radius: 8px;
-      font-weight: 700 !important;
-      transition: all 0.3s !important;
-    }
-    .nav-cta-link::after { display: none !important; }
-    .nav-cta-link:hover { background: var(--white) !important; transform: translateY(-2px); }
-    .hamburger {
-      display: none;
-      background: none; border: none; cursor: pointer;
-      flex-direction: column; gap: 6px;
-      z-index: 101;
-    }
-    .hamburger span {
-      display: block; width: 26px; height: 2px;
-      background: var(--white);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      transform-origin: center;
-    }
-    .nav.scrolled .hamburger span,
-    .hamburger.active span { background: var(--text); box-shadow: none; }
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 9rem 2rem 11rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--brand-dark);
-    }
-    .hero-bg-image {
-      position: absolute; inset: 0;
-      background-image: url('images/hero-bg.jpg');
-      background-size: cover;
-      background-position: center 35%;
-      z-index: 0;
-    }
-    @media (max-width: 768px) {
-      .hero-bg-image { background-image: url('images/hero-bg-mobile.jpg'); }
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(100deg, rgba(9,31,58,0.96) 0%, rgba(9,31,58,0.88) 34%, rgba(9,31,58,0.55) 58%, rgba(9,31,58,0.18) 82%, rgba(9,31,58,0.05) 100%);
-      z-index: 1;
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 600px; }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.22);
-      backdrop-filter: blur(8px);
-      padding: 0.4rem 1.2rem;
-      border-radius: 100px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 2rem;
-      opacity: 0;
-    }
-    .badge-dot {
-      width: 8px; height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.5); }
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      line-height: 1.1;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-    .hero h1 .line { display: block; overflow: hidden; }
-    .hero h1 .line-inner {
-      display: block;
-      transform: translateY(110%);
-    }
-    .hero h1 .highlight {
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-    }
-    .highlight-stroke {
-      position: absolute;
-      bottom: 0; left: -5%; right: -5%;
-      height: 12px;
-      z-index: -1;
-      overflow: visible;
-    }
-    .highlight-stroke path {
-      stroke: var(--accent);
-      stroke-width: 10;
-      fill: none;
-      stroke-linecap: round;
-      stroke-dasharray: 500;
-      stroke-dashoffset: 500;
-    }
-    .hero-sub {
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.78);
-      max-width: 480px;
-      margin: 0 0 2.5rem;
-      line-height: 1.7;
-      opacity: 0;
-    }
-    .hero-buttons {
-      display: flex; gap: 1rem;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      opacity: 0;
-    }
-
-    /* ── BUTTONS ── */
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      padding: 0.95rem 2.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      border: none;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
-    }
-    .btn::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: rgba(255,255,255,0.15);
-      transform: translateX(-110%) skewX(-15deg);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .btn:hover::before { transform: translateX(110%) skewX(-15deg); }
-    .btn:hover { transform: translateY(-3px); }
-    .btn-primary {
-      background: var(--brand);
-      color: var(--white);
-    }
-    .btn-primary:hover { box-shadow: 0 8px 30px rgba(15,52,96,0.35); }
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border: 1.5px solid var(--border);
-    }
-    .btn-outline:hover { border-color: var(--brand); color: var(--brand); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
-    .btn-accent {
-      background: var(--accent);
-      color: var(--brand-dark);
-    }
-    .btn-accent:hover { box-shadow: 0 8px 30px rgba(212,168,67,0.4); }
-    .btn-outline-light {
-      background: rgba(255,255,255,0.06);
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.4);
-      backdrop-filter: blur(6px);
-    }
-    .btn-outline-light:hover { border-color: var(--accent); color: var(--accent); background: rgba(255,255,255,0.12); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
-    .btn-whatsapp {
-      background: #25D366;
-      color: var(--white);
-      font-size: 1.1rem;
-      padding: 1.1rem 2.8rem;
-    }
-    .btn-whatsapp:hover { box-shadow: 0 8px 30px rgba(37,211,102,0.35); }
-    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
-
-    /* ── HERO STATS (floating card) ── */
-    .hero-stats-wrap {
-      position: relative;
-      z-index: 5;
-      margin-top: -70px;
-      padding: 0 2rem;
-    }
-    .hero-stats {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: var(--brand-dark);
-      border-radius: 20px;
-      padding: 1.8rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      box-shadow: 0 25px 60px rgba(9,31,58,0.35);
-      opacity: 0;
-    }
-    .hero-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-    }
-    .hero-stat-icon {
-      width: 46px; height: 46px;
-      min-width: 46px;
-      border-radius: 50%;
-      background: rgba(212,168,67,0.15);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .hero-stat-icon svg { width: 22px; height: 22px; color: var(--accent); }
-    .hero-stat-info { display: flex; flex-direction: column; }
-    .hero-stat-info strong {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      color: var(--white);
-      line-height: 1;
-    }
-    .hero-stat-info span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.35rem;
-      white-space: nowrap;
-    }
-    .hero-stat-sep {
-      width: 1px; height: 40px;
-      background: rgba(255,255,255,0.12);
-      flex-shrink: 0;
-    }
-
-    /* ── SECTIONS ── */
-    .section { padding: 7rem 2rem; }
-    .section-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--brand);
-      margin-bottom: 1rem;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-    .section-sub {
-      font-size: 1.1rem;
-      color: var(--text-sec);
-      max-width: 500px;
-      line-height: 1.7;
-    }
-
-    /* ── SERVICES ── */
-    .services-section { background: var(--bg); }
-    .services-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.2rem 1.8rem;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-      border-color: var(--brand);
-    }
-    .service-card-accent {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--brand), var(--accent));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .service-card:hover .service-card-accent { transform: scaleX(1); }
-    .service-icon-wrap {
-      width: 56px; height: 56px;
-      background: var(--brand-light);
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.5rem;
-      transition: all 0.4s;
-    }
-    .service-card:hover .service-icon-wrap {
-      background: var(--brand);
-      transform: rotate(-5deg) scale(1.05);
-    }
-    .service-icon-wrap svg {
-      width: 26px; height: 26px;
-      color: var(--brand);
-      transition: color 0.4s;
-    }
-    .service-card:hover .service-icon-wrap svg { color: var(--white); }
-    .service-card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
-    .service-card p {
-      color: var(--text-sec);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-    .service-card .card-arrow {
-      display: flex; align-items: center; gap: 0.4rem;
-      margin-top: 1.2rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--brand);
-      opacity: 0;
-      transform: translateX(-10px);
-      transition: all 0.4s;
-    }
-    .service-card:hover .card-arrow { opacity: 1; transform: translateX(0); }
-
-    /* ── TRABALHOS (PORTFÓLIO) ── */
-    .works-section { background: var(--white); }
-    .works-header {
-      max-width: 1200px;
-      margin: 0 auto 3rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .works-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.85fr 1.05fr;
-      grid-template-rows: repeat(2, 210px);
-      gap: 1.25rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .work-item {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border-radius: 18px;
-      text-decoration: none;
-      background: var(--brand-dark);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-      transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .work-item:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.18); }
-    .work-item.large { grid-row: span 2; }
-    .work-item img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center 75%;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .work-item:hover img { transform: scale(1.08); }
-    .work-item::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(9,31,58,0) 40%, rgba(9,31,58,0.85) 100%);
-    }
-    .work-overlay {
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      z-index: 2;
-      padding: 1.4rem;
-      color: var(--white);
-    }
-    .work-tag {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--brand-dark);
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.3rem 0.7rem;
-      border-radius: 100px;
-      margin-bottom: 0.6rem;
-    }
-    .work-overlay h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      line-height: 1.25;
-    }
-    .work-arrow {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--white);
-      opacity: 0;
-      transform: translateY(6px);
-      transition: all 0.4s;
-    }
-    .work-item:hover .work-arrow { opacity: 1; transform: translateY(0); }
-    .work-predial { grid-column: 1; grid-row: 1 / 3; }
-    .work-residencial { grid-column: 2; grid-row: 1; }
-    .work-textura { grid-column: 2; grid-row: 2; }
-    .work-interior { grid-column: 3; grid-row: 1 / 3; }
-
-    /* ── DIFERENCIAIS ── */
-    .diff-section {
-      background: var(--brand-dark);
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-    .diff-section .section-tag { color: var(--accent); }
-    .diff-section .section-title { color: var(--white); }
-    .diff-section .section-sub { color: rgba(255,255,255,0.6); }
-    .diff-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      text-align: center;
-    }
-    .diff-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .diff-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .diff-card:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.2);
-      transform: translateY(-4px);
-    }
-    .diff-card-icon {
-      width: 48px; height: 48px;
-      background: rgba(212,168,67,0.15);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.2rem;
-    }
-    .diff-card-icon svg { width: 24px; height: 24px; color: var(--accent); }
-    .diff-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .diff-card p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
-
-    /* bg paint drips */
-    .paint-drips {
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 80px;
-      overflow: visible;
-    }
-    .paint-drips svg { width: 100%; height: auto; display: block; }
-
-    /* ── PROCESS ── */
-    .process-section { background: var(--white); }
-    .process-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      text-align: center;
-    }
-    .process-track {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-    }
-    .process-line {
-      position: absolute;
-      left: 32px;
-      top: 0; bottom: 0;
-      width: 2px;
-      background: var(--border);
-    }
-    .process-line-fill {
-      width: 100%;
-      height: 0%;
-      background: var(--brand);
-      transition: height 0.1s;
-    }
-    .process-step {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-      padding: 2rem 0;
-      position: relative;
-    }
-    .step-marker {
-      width: 64px; height: 64px;
-      min-width: 64px;
-      background: var(--brand-light);
-      border: 3px solid var(--bg);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      color: var(--brand);
-      position: relative;
-      z-index: 2;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .process-step.active .step-marker {
-      background: var(--brand);
-      color: var(--white);
-      transform: scale(1.1);
-      box-shadow: 0 0 0 8px rgba(15,52,96,0.12);
-    }
-    .step-content h4 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-    .step-content p {
-      color: var(--text-sec);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* ── TESTIMONIALS ── */
-    .testimonials-section { background: var(--bg); overflow: hidden; }
-    .test-header {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      text-align: center;
-    }
-    .test-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .test-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2rem;
-      position: relative;
-      transition: all 0.4s;
-    }
-    .test-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
-    .test-quote-mark {
-      font-family: var(--font-display);
-      font-size: 4rem;
-      color: var(--brand-light);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-    .test-stars { color: var(--accent); font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 1rem; }
-    .test-card blockquote {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: var(--text-sec);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-    .test-author { display: flex; align-items: center; gap: 0.8rem; }
-    .test-avatar {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      background: var(--brand-light);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700;
-      font-size: 0.8rem;
-      color: var(--brand);
-    }
-    .test-author-info strong { font-size: 0.9rem; display: block; }
-    .test-author-info span { font-size: 0.8rem; color: var(--text-muted); }
-
-    /* ── CTA ── */
-    .cta-section {
-      padding: 8rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: var(--white);
-    }
-    .cta-content { position: relative; z-index: 2; }
-    .cta-section .section-title {
-      font-size: clamp(2rem, 4.5vw, 3.2rem);
-      margin-bottom: 1rem;
-    }
-    .cta-section .section-sub {
-      margin: 0 auto 2.5rem;
-      max-width: 480px;
-    }
-    .cta-bg-text {
-      position: absolute;
-      font-family: var(--font-display);
-      font-size: clamp(6rem, 15vw, 14rem);
-      color: rgba(15,52,96,0.04);
-      white-space: nowrap;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      user-select: none;
-    }
-
-    /* ── FOOTER ── */
-    .footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.7);
-      padding: 4rem 2rem 1.5rem;
-    }
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-    }
-    .footer-brand-name {
-      margin-bottom: 1.2rem;
-      display: inline-flex;
-      background: var(--white);
-      padding: 0.6rem 1rem;
-      border-radius: 12px;
-    }
-    .footer-brand-name img {
-      height: 60px;
-      width: auto;
-    }
-    .footer p { font-size: 0.88rem; line-height: 1.7; }
-    .footer h4 {
-      color: var(--white);
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1rem;
-    }
-    .footer ul { list-style: none; }
-    .footer ul li { margin-bottom: 0.5rem; }
-    .footer ul a {
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      font-size: 0.88rem;
-      transition: color 0.3s;
-    }
-    .footer ul a:hover { color: var(--white); }
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 3rem auto 0;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .footer-bottom a { color: var(--accent); text-decoration: none; }
-
-    /* ── WHATSAPP FAB ── */
-    .whatsapp-fab {
-      position: fixed;
-      bottom: 2rem; right: 2rem;
-      z-index: 99;
-      text-decoration: none;
-    }
-    .fab-inner {
-      width: 60px; height: 60px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-    }
-    .fab-inner::before {
-      content: '';
-      position: absolute; inset: -4px;
-      border-radius: 50%;
-      background: rgba(37,211,102,0.2);
-      animation: fabPulse 2s ease-in-out infinite;
-    }
-    @keyframes fabPulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.15); opacity: 0; }
-    }
-    .whatsapp-fab:hover .fab-inner {
-      transform: scale(1.1) rotate(-10deg);
-      box-shadow: 0 8px 30px rgba(37,211,102,0.5);
-    }
-    .fab-inner svg { width: 28px; height: 28px; fill: var(--white); position: relative; z-index: 1; }
-    .fab-tooltip {
-      position: absolute;
-      right: 72px; top: 50%;
-      transform: translateY(-50%) translateX(8px);
-      background: var(--white);
-      color: var(--text);
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      white-space: nowrap;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s;
-    }
-    .whatsapp-fab:hover .fab-tooltip { opacity: 1; transform: translateY(-50%) translateX(0); }
-
-    /* ── ACESSIBILIDADE: FOCO DE TECLADO ── */
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--brand);
-      outline-offset: 3px;
-      border-radius: 4px;
-    }
-    .btn:focus-visible { outline-color: var(--white); outline-offset: 3px; }
-
-    /* ── PREFERS-REDUCED-MOTION ── */
-    @media (prefers-reduced-motion: reduce) {
-      .badge-dot, .fab-inner::before {
-        animation: none !important;
+    <!-- SUBSTITUA os dados abaixo pelos dados reais da empresa antes de publicar -->
+    <script type="application/ld+json" id="business-schema">
+      {
+        "@context": "https://schema.org",
+        "@type": "PaintingContractor",
+        "name": "W.C Pintura LTDA",
+        "image": "https://www.wcpintura.com.br/images/logo-wc.jpg",
+        "url": "https://www.wcpintura.com.br/",
+        "telephone": "+5511999999999",
+        "email": "contato@wcpintura.com.br",
+        "areaServed": ["ABC Paulista", "Grande São Paulo"],
+        "priceRange": "$$",
+        "sameAs": []
       }
-      * { transition-duration: 0.01ms !important; }
-    }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .diff-grid { grid-template-columns: repeat(2, 1fr); }
-      .works-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(2, 220px); }
-      .work-predial { grid-column: 1; grid-row: 1 / 3; }
-      .work-residencial { grid-column: 2; grid-row: 1; }
-      .work-textura { grid-column: 2; grid-row: 2; }
-      .work-interior { grid-column: 1 / 3; grid-row: 3; height: 260px; }
-      .hero-stats { justify-content: center; gap: 2rem 3rem; }
-      .hero-stat-sep { display: none; }
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        inset: 0;
-        background: var(--white);
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { color: var(--text-sec); font-size: 1.3rem; text-shadow: none; }
-      .hamburger { display: flex; }
-      .hero { padding: 7.5rem 1.5rem 9rem; }
-      .hero-content { max-width: 100%; }
-      .hero-stats-wrap { margin-top: -40px; padding: 0 1.25rem; }
-      .hero-stats {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.2rem;
-        border-radius: 16px;
-        padding: 1.4rem 1.5rem;
-      }
-      .hero-stat-info strong { font-size: 1.3rem; }
-      .hero-stat-info span { white-space: normal; }
-      .services-grid, .diff-grid, .test-grid { grid-template-columns: 1fr; }
-      .services-header { text-align: center; }
-      .works-header { text-align: center; justify-content: center; }
-      .works-grid { grid-template-columns: 1fr; grid-template-rows: none; }
-      .work-predial, .work-residencial, .work-textura, .work-interior {
-        grid-column: 1; grid-row: auto; height: 260px;
-      }
-      .footer-inner { grid-template-columns: 1fr; }
-      .section { padding: 5rem 1.5rem; }
-      .process-step { gap: 1.2rem; }
-      .step-marker { width: 48px; height: 48px; min-width: 48px; font-size: 1rem; }
-      .process-line { left: 23px; }
-    }
-  </style>
-</head>
-<body>
-  <script>
-    // ======================================================================
-    // DADOS DE CONTATO — SUBSTITUA pelos dados reais da empresa antes de publicar.
-    // Editar aqui atualiza automaticamente todos os links de WhatsApp, e-mail
-    // e Instagram do site (botões, rodapé e dados estruturados de SEO).
-    // ======================================================================
-    window.WC_CONTACT = {
-      whatsapp: '5511999999999',              // SUBSTITUA: DDI+DDD+número, ex: 5511987654321
-      email: 'contato@wcpintura.com.br',       // SUBSTITUA
-      instagram: ''                            // SUBSTITUA: ex: 'https://instagram.com/wcpintura'
-    };
-  </script>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <div class="loader-logo">
+        <picture>
+          <source srcset="/images/logo-wc-gold.webp" type="image/webp" />
+          <img src="/images/logo-wc-gold.png" alt="W.C Pintura LTDA" width="769" height="732" />
+        </picture>
+      </div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
 
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-logo"><img src="images/logo-wc-nav.jpg" alt="W.C Pintura LTDA" style="height: 84px; width: auto; display: block;"></div>
-    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
-  </div>
+    <header id="site-header">
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <div class="nav-inner">
+          <a href="#" class="nav-logo" aria-label="W.C Pintura LTDA — início">
+            <picture class="nav-logo-dark">
+              <source srcset="/images/logo-wc-gold.webp" type="image/webp" />
+              <img src="/images/logo-wc-gold.png" alt="W.C Pintura LTDA" width="769" height="732" />
+            </picture>
+            <picture class="nav-logo-light">
+              <source srcset="/images/logo-wc-navy.webp" type="image/webp" />
+              <img src="/images/logo-wc-navy.png" alt="W.C Pintura LTDA" width="769" height="732" />
+            </picture>
+          </a>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#trabalhos">Trabalhos</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato" class="nav-cta-link">Orçamento grátis</a></li>
+          </ul>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="images/logo-wc-nav.jpg" alt="W.C Pintura LTDA"></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#trabalhos">Trabalhos</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#processo">Como funciona</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato" class="nav-cta-link">Orçamento grátis</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    <main id="main-content">
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero-bg-image"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Atendendo ABC Paulista e Grande SP
+          </div>
+          <h1>
+            <span class="line"><span class="line-inner">Seu imóvel</span></span>
+            <span class="line"
+              ><span class="line-inner"
+                ><span class="highlight"
+                  >renovado<svg class="highlight-stroke" viewBox="0 0 280 18">
+                    <path d="M2 15 C60 2, 140 2, 278 12" /></svg
+                ></span>
+                com</span
+              ></span
+            >
+            <span class="line"><span class="line-inner">qualidade que se vê</span></span>
+          </h1>
+          <p class="hero-sub">
+            Pintura predial e residencial com acabamento impecável, equipe treinada e prazo
+            respeitado. Resultado garantido desde a primeira demão.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#"
+              class="btn btn-accent js-whatsapp"
+              data-msg="Olá! Gostaria de solicitar um orçamento."
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              Pedir orçamento grátis
+            </a>
+            <a href="#servicos" class="btn btn-outline-light">Conhecer serviços ↓</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-image"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Atendendo ABC Paulista e Grande SP
-      </div>
-      <h1>
-        <span class="line"><span class="line-inner">Seu imóvel</span></span>
-        <span class="line"><span class="line-inner"><span class="highlight">renovado<svg class="highlight-stroke" viewBox="0 0 280 18"><path d="M2 15 C60 2, 140 2, 278 12"/></svg></span> com</span></span>
-        <span class="line"><span class="line-inner">qualidade que se vê</span></span>
-      </h1>
-      <p class="hero-sub">Pintura predial e residencial com acabamento impecável, equipe treinada e prazo respeitado. Resultado garantido desde a primeira demão.</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-accent js-whatsapp" data-msg="Olá! Gostaria de solicitar um orçamento.">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Pedir orçamento grátis
-        </a>
-        <a href="#servicos" class="btn btn-outline-light">Conhecer serviços ↓</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HERO STATS -->
-  <div class="hero-stats-wrap">
-    <div class="hero-stats" id="heroStats">
-      <div class="hero-stat">
-        <div class="hero-stat-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <div class="hero-stat-info"><strong>15+</strong><span>Anos de experiência</span></div>
-      </div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75"/></svg></div>
-        <div class="hero-stat-info"><strong>500+</strong><span>Projetos concluídos</span></div>
-      </div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg></div>
-        <div class="hero-stat-info"><strong>98%</strong><span>Clientes satisfeitos</span></div>
-      </div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
-        <div class="hero-stat-info"><strong>ABC</strong><span>Paulista e Grande SP</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVIÇOS -->
-  <section class="section services-section" id="servicos">
-    <div class="services-header">
-      <div>
-        <span class="section-tag">Serviços</span>
-        <h2 class="section-title">Soluções completas<br>em pintura</h2>
-        <p class="section-sub">Do planejamento à entrega final, cada detalhe é pensado para transformar seu espaço.</p>
-      </div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card" data-tilt>
-        <div class="service-card-accent"></div>
-        <div class="service-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z"/></svg>
-        </div>
-        <h3>Pintura predial</h3>
-        <p>Fachadas, áreas comuns, garagens e halls. Equipamentos próprios e equipe certificada para trabalho em altura.</p>
-        <div class="card-arrow">Saiba mais →</div>
-      </div>
-      <div class="service-card" data-tilt>
-        <div class="service-card-accent"></div>
-        <div class="service-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"/></svg>
-        </div>
-        <h3>Pintura residencial</h3>
-        <p>Casas e apartamentos com cores sob medida, tintas de primeira linha e acabamento perfeito.</p>
-        <div class="card-arrow">Saiba mais →</div>
-      </div>
-      <div class="service-card" data-tilt>
-        <div class="service-card-accent"></div>
-        <div class="service-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
-        </div>
-        <h3>Textura e efeitos</h3>
-        <p>Grafiato, textura rústica, cimento queimado e marmorizado. Paredes que contam uma história.</p>
-        <div class="card-arrow">Saiba mais →</div>
-      </div>
-      <div class="service-card" data-tilt>
-        <div class="service-card-accent"></div>
-        <div class="service-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.652 3.126 1.08-6.293-4.574-4.459 6.318-.918L11.42 1.136l2.828 5.49 6.318.918-4.574 4.46 1.08 6.292-5.652-3.126z"/></svg>
-        </div>
-        <h3>Preparação e tratamento</h3>
-        <p>Limpeza, massa corrida, selador e impermeabilização. A base certa para um resultado duradouro.</p>
-        <div class="card-arrow">Saiba mais →</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRABALHOS (PORTFÓLIO) -->
-  <section class="section works-section" id="trabalhos">
-    <div class="works-header">
-      <div>
-        <span class="section-tag">Portfólio</span>
-        <h2 class="section-title">Trabalhos que<br>falam por si</h2>
-        <p class="section-sub">Pintura predial, residencial, texturas e acabamentos — um pouco do que já entregamos pra quem confiou na gente.</p>
-      </div>
-      <a href="#contato" class="btn btn-outline">Solicitar orçamento</a>
-    </div>
-    <div class="works-grid">
-      <a href="#" class="work-item large work-predial js-whatsapp" data-msg="Olá! Vi os trabalhos de pintura predial de vocês e gostaria de um orçamento.">
-        <img src="images/trabalho-predial.jpg" alt="Fachada de prédio residencial pintada" loading="lazy">
-        <div class="work-overlay">
-          <span class="work-tag">Predial</span>
-          <h3>Fachadas e Prédios</h3>
-          <span class="work-arrow">Pedir orçamento →</span>
-        </div>
-      </a>
-      <a href="#" class="work-item work-residencial js-whatsapp" data-msg="Olá! Gostaria de um orçamento de pintura residencial.">
-        <img src="images/trabalho-residencial.jpg" alt="Casa residencial com pintura externa" loading="lazy">
-        <div class="work-overlay">
-          <span class="work-tag">Residencial</span>
-          <h3>Casas e Sobrados</h3>
-        </div>
-      </a>
-      <a href="#" class="work-item work-textura js-whatsapp" data-msg="Olá! Tenho interesse em textura/efeito especial para minha parede.">
-        <img src="images/trabalho-textura.jpg" alt="Aplicação de textura em parede" loading="lazy">
-        <div class="work-overlay">
-          <span class="work-tag">Texturas</span>
-          <h3>Grafiato e Acabamentos</h3>
-        </div>
-      </a>
-      <a href="#" class="work-item large work-interior js-whatsapp" data-msg="Olá! Gostaria de um orçamento para pintura interna.">
-        <img src="images/trabalho-interior.jpg" alt="Sala de estar com pintura interna" loading="lazy">
-        <div class="work-overlay">
-          <span class="work-tag">Interiores</span>
-          <h3>Salas e Ambientes</h3>
-          <span class="work-arrow">Pedir orçamento →</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- DIFERENCIAIS -->
-  <section class="section diff-section" id="diferenciais">
-    <div class="paint-drips">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,0 L0,40 Q120,80 240,40 Q300,20 360,40 Q400,55 440,40 Q500,15 560,40 Q620,65 680,40 Q740,10 800,40 Q860,70 920,40 Q960,20 1000,40 Q1060,60 1120,40 Q1180,15 1240,40 Q1300,60 1360,40 L1440,40 L1440,0 Z" fill="#FFFFFF"/>
-      </svg>
-    </div>
-    <div class="diff-header">
-      <span class="section-tag">Por que a W.C Pintura?</span>
-      <h2 class="section-title">O que nos diferencia</h2>
-      <p class="section-sub" style="margin: 0 auto;">Mais do que pintar, entregamos tranquilidade e resultado.</p>
-    </div>
-    <div class="diff-grid">
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <h4>Garantia de serviço</h4>
-        <p>Cobertura pós-entrega para você ficar 100% tranquilo com o resultado final.</p>
-      </div>
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <h4>Prazo respeitado</h4>
-        <p>Cronograma definido e cumprido. Sem surpresas, sem atrasos desnecessários.</p>
-      </div>
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
-        </div>
-        <h4>Equipe própria e treinada</h4>
-        <p>Profissionais registrados, com EPIs e capacitação contínua em técnicas modernas.</p>
-      </div>
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/></svg>
-        </div>
-        <h4>Orçamento transparente</h4>
-        <p>Preço fechado na visita técnica. Sem custos ocultos ou reajustes surpresa.</p>
-      </div>
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
-        </div>
-        <h4>Limpeza inclusa</h4>
-        <p>Ao final, deixamos tudo limpo. Você só precisa curtir o resultado novo.</p>
-      </div>
-      <div class="diff-card">
-        <div class="diff-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
-        </div>
-        <h4>Tintas de primeira linha</h4>
-        <p>Suvinil, Coral e Sherwin-Williams. Durabilidade e cor fiel por muito mais tempo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
-  <section class="section process-section" id="processo">
-    <div class="process-header">
-      <span class="section-tag">Como funciona</span>
-      <h2 class="section-title">Do contato à entrega</h2>
-      <p class="section-sub" style="margin: 0 auto;">Processo simples e organizado pra você não se preocupar com nada.</p>
-    </div>
-    <div class="process-track">
-      <div class="process-line"><div class="process-line-fill" id="processLineFill"></div></div>
-      <div class="process-step" data-step="1">
-        <div class="step-marker">1</div>
-        <div class="step-content">
-          <h4>Contato pelo WhatsApp</h4>
-          <p>Você nos chama, conta o que precisa e já recebe uma estimativa inicial. Rápido e sem burocracia.</p>
-        </div>
-      </div>
-      <div class="process-step" data-step="2">
-        <div class="step-marker">2</div>
-        <div class="step-content">
-          <h4>Visita técnica gratuita</h4>
-          <p>Nossa equipe vai até o local, avalia as condições e entrega um orçamento detalhado sem compromisso.</p>
-        </div>
-      </div>
-      <div class="process-step" data-step="3">
-        <div class="step-marker">3</div>
-        <div class="step-content">
-          <h4>Execução profissional</h4>
-          <p>Preparação completa, pintura com técnica e acabamento impecável. Acompanhamento diário do progresso.</p>
-        </div>
-      </div>
-      <div class="process-step" data-step="4">
-        <div class="step-marker">4</div>
-        <div class="step-content">
-          <h4>Entrega com garantia</h4>
-          <p>Vistoria final com você, limpeza completa do ambiente e garantia por escrito do serviço.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
-  <section class="section testimonials-section" id="depoimentos">
-    <div class="test-header">
-      <span class="section-tag">Depoimentos</span>
-      <h2 class="section-title">Quem confiou, aprovou</h2>
-      <p class="section-sub" style="margin: 0 auto;">A satisfação dos nossos clientes fala por si.</p>
-    </div>
-    <div class="test-grid">
-      <div class="test-card" data-tilt>
-        <div class="test-quote-mark">"</div>
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Pintaram todo o prédio em 3 semanas, sem atraso nenhum. Ficou perfeito e o preço foi justo. Já indicamos pra outros condomínios."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">CM</div>
-          <div class="test-author-info">
-            <strong>Carlos M.</strong>
-            <span>Síndico — Santo André</span>
+      <!-- HERO STATS -->
+      <div class="hero-stats-wrap">
+        <div class="hero-stats" id="heroStats">
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <div class="hero-stat-info"><strong>15+</strong><span>Anos de experiência</span></div>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75"
+                />
+              </svg>
+            </div>
+            <div class="hero-stat-info"><strong>500+</strong><span>Projetos concluídos</span></div>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+            </div>
+            <div class="hero-stat-info"><strong>98%</strong><span>Clientes satisfeitos</span></div>
+          </div>
+          <div class="hero-stat-sep"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                />
+              </svg>
+            </div>
+            <div class="hero-stat-info"><strong>ABC</strong><span>Paulista e Grande SP</span></div>
           </div>
         </div>
       </div>
-      <div class="test-card" data-tilt>
-        <div class="test-quote-mark">"</div>
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"A equipe foi super educada e organizada. Minha sala ficou irreconhecível — no melhor sentido. Recomendo demais."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">FL</div>
-          <div class="test-author-info">
-            <strong>Fernanda L.</strong>
-            <span>Proprietária — São Bernardo</span>
+
+      <!-- SOBRE -->
+      <section class="section about-section" id="sobre">
+        <div class="about-grid">
+          <div class="about-media">
+            <picture>
+              <source srcset="/images/sobre-pintura.webp" type="image/webp" />
+              <img
+                src="/images/sobre-pintura.jpg"
+                alt="Detalhe de parede sendo pintada com rolo"
+                loading="lazy"
+              />
+            </picture>
+            <div class="about-badge">
+              <strong>15+</strong>
+              <span>Anos transformando imóveis</span>
+            </div>
+          </div>
+          <div class="about-content">
+            <span class="section-tag">Sobre nós</span>
+            <h2 class="section-title">Quem coloca a mão na massa</h2>
+            <p>
+              A W.C Pintura nasceu no ABC Paulista com um objetivo simples: entregar um serviço de
+              pintura em que o cliente não precisa ficar em cima. Equipe própria, prazo combinado e
+              um acabamento que fala por si — é assim que construímos nossa reputação, obra após
+              obra.
+            </p>
+            <p>
+              Hoje atendemos síndicos, construtoras e famílias em toda a Grande São Paulo, sempre
+              com o mesmo cuidado do primeiro contrato.
+            </p>
+            <ul class="about-points">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Equipe própria e treinada, sem terceirização
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Vistoria técnica antes de qualquer orçamento
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Do primeiro contato à entrega, você acompanha tudo
+              </li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Falar com a gente</a>
           </div>
         </div>
-      </div>
-      <div class="test-card" data-tilt>
-        <div class="test-quote-mark">"</div>
-        <div class="test-stars">★★★★★</div>
-        <blockquote>"Fizeram a textura da fachada do meu comércio e o resultado ficou acima do esperado. Profissionais de verdade."</blockquote>
-        <div class="test-author">
-          <div class="test-avatar">RS</div>
-          <div class="test-author-info">
-            <strong>Roberto S.</strong>
-            <span>Empresário — São Caetano</span>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section class="section services-section" id="servicos">
+        <div class="services-header">
+          <div>
+            <span class="section-tag">Serviços</span>
+            <h2 class="section-title">Soluções completas<br />em pintura</h2>
+            <p class="section-sub">
+              Do planejamento à entrega final, cada detalhe é pensado para transformar seu espaço.
+            </p>
           </div>
         </div>
+        <div class="services-grid">
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z"
+                />
+              </svg>
+            </div>
+            <h3>Pintura predial</h3>
+            <p>
+              Fachadas, áreas comuns, garagens e halls. Equipamentos próprios e equipe certificada
+              para trabalho em altura.
+            </p>
+            <div class="card-arrow">Saiba mais →</div>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"
+                />
+              </svg>
+            </div>
+            <h3>Pintura residencial</h3>
+            <p>
+              Casas e apartamentos com cores sob medida, tintas de primeira linha e acabamento
+              perfeito.
+            </p>
+            <div class="card-arrow">Saiba mais →</div>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
+                />
+              </svg>
+            </div>
+            <h3>Textura e efeitos</h3>
+            <p>
+              Grafiato, textura rústica, cimento queimado e marmorizado. Paredes que contam uma
+              história.
+            </p>
+            <div class="card-arrow">Saiba mais →</div>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11.42 15.17l-5.652 3.126 1.08-6.293-4.574-4.459 6.318-.918L11.42 1.136l2.828 5.49 6.318.918-4.574 4.46 1.08 6.292-5.652-3.126z"
+                />
+              </svg>
+            </div>
+            <h3>Preparação e tratamento</h3>
+            <p>
+              Limpeza, massa corrida, selador e impermeabilização. A base certa para um resultado
+              duradouro.
+            </p>
+            <div class="card-arrow">Saiba mais →</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRABALHOS (PORTFÓLIO) -->
+      <section class="section works-section" id="trabalhos">
+        <div class="works-header">
+          <div>
+            <span class="section-tag">Portfólio</span>
+            <h2 class="section-title">Trabalhos que<br />falam por si</h2>
+            <p class="section-sub">
+              Pintura predial, residencial, texturas e acabamentos — um pouco do que já entregamos
+              pra quem confiou na gente.
+            </p>
+          </div>
+          <a href="#contato" class="btn btn-outline">Solicitar orçamento</a>
+        </div>
+        <div class="works-grid">
+          <a
+            href="#"
+            class="work-item large work-predial js-whatsapp"
+            data-msg="Olá! Vi os trabalhos de pintura predial de vocês e gostaria de um orçamento."
+          >
+            <picture>
+              <source srcset="/images/trabalho-predial.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-predial.jpg"
+                alt="Fachada de prédio residencial pintada"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Predial</span>
+              <h3>Fachadas e Prédios</h3>
+              <span class="work-arrow">Pedir orçamento →</span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="work-item work-residencial js-whatsapp"
+            data-msg="Olá! Gostaria de um orçamento de pintura residencial."
+          >
+            <picture>
+              <source srcset="/images/trabalho-residencial.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-residencial.jpg"
+                alt="Casa residencial com pintura externa"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Residencial</span>
+              <h3>Casas e Sobrados</h3>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="work-item work-textura js-whatsapp"
+            data-msg="Olá! Tenho interesse em textura/efeito especial para minha parede."
+          >
+            <picture>
+              <source srcset="/images/trabalho-textura.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-textura.jpg"
+                alt="Aplicação de textura em parede"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Texturas</span>
+              <h3>Grafiato e Acabamentos</h3>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="work-item large work-interior js-whatsapp"
+            data-msg="Olá! Gostaria de um orçamento para pintura interna."
+          >
+            <picture>
+              <source srcset="/images/trabalho-interior.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-interior.jpg"
+                alt="Sala de estar com pintura interna"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Interiores</span>
+              <h3>Salas e Ambientes</h3>
+              <span class="work-arrow">Pedir orçamento →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ANTES E DEPOIS -->
+      <section class="section before-after-section" id="antes-depois">
+        <div class="ba-header">
+          <span class="section-tag">O impacto de uma boa pintura</span>
+          <h2 class="section-title">Arraste e veja a diferença</h2>
+          <p class="section-sub">
+            Uma pintura bem-feita muda completamente a percepção de um imóvel. Arraste o controle
+            para comparar.
+          </p>
+        </div>
+        <div class="ba-slider" id="baSlider">
+          <div class="ba-image ba-after">
+            <picture>
+              <source srcset="/images/antes-depois-after.webp" type="image/webp" />
+              <img
+                src="/images/antes-depois-after.jpg"
+                alt="Parede com pintura em bom estado, cor uniforme"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="ba-image ba-before" id="baBeforeWrap">
+            <picture>
+              <source srcset="/images/antes-depois-before.webp" type="image/webp" />
+              <img
+                src="/images/antes-depois-before.jpg"
+                alt="Mesma parede com aparência desgastada e sem brilho, simulando o estado antes da pintura"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <span class="ba-label ba-label-before">Antes</span>
+          <span class="ba-label ba-label-after">Depois</span>
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-handle-grip">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l-7.5 7.5 7.5 7.5m7.5-15l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="ba-range"
+            id="baRange"
+            aria-label="Controle deslizante para comparar antes e depois da pintura"
+          />
+        </div>
+      </section>
+
+      <!-- DIFERENCIAIS -->
+      <section class="section diff-section" id="diferenciais">
+        <div class="paint-drips">
+          <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0,0 L0,40 Q120,80 240,40 Q300,20 360,40 Q400,55 440,40 Q500,15 560,40 Q620,65 680,40 Q740,10 800,40 Q860,70 920,40 Q960,20 1000,40 Q1060,60 1120,40 Q1180,15 1240,40 Q1300,60 1360,40 L1440,40 L1440,0 Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </div>
+        <div class="diff-header">
+          <span class="section-tag">Por que a W.C Pintura?</span>
+          <h2 class="section-title">O que nos diferencia</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Mais do que pintar, entregamos tranquilidade e resultado.
+          </p>
+        </div>
+        <div class="diff-grid">
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h4>Garantia de serviço</h4>
+            <p>Cobertura pós-entrega para você ficar 100% tranquilo com o resultado final.</p>
+          </article>
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h4>Prazo respeitado</h4>
+            <p>Cronograma definido e cumprido. Sem surpresas, sem atrasos desnecessários.</p>
+          </article>
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+            </div>
+            <h4>Equipe própria e treinada</h4>
+            <p>Profissionais registrados, com EPIs e capacitação contínua em técnicas modernas.</p>
+          </article>
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                />
+              </svg>
+            </div>
+            <h4>Orçamento transparente</h4>
+            <p>Preço fechado na visita técnica. Sem custos ocultos ou reajustes surpresa.</p>
+          </article>
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"
+                />
+              </svg>
+            </div>
+            <h4>Limpeza inclusa</h4>
+            <p>Ao final, deixamos tudo limpo. Você só precisa curtir o resultado novo.</p>
+          </article>
+          <article class="diff-card">
+            <div class="diff-card-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+                />
+              </svg>
+            </div>
+            <h4>Tintas de primeira linha</h4>
+            <p>Suvinil, Coral e Sherwin-Williams. Durabilidade e cor fiel por muito mais tempo.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="section process-section" id="processo">
+        <div class="process-header">
+          <span class="section-tag">Como funciona</span>
+          <h2 class="section-title">Do contato à entrega</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Processo simples e organizado pra você não se preocupar com nada.
+          </p>
+        </div>
+        <div class="process-track">
+          <div class="process-line"><div class="process-line-fill" id="processLineFill"></div></div>
+          <ol class="process-steps">
+            <li class="process-step" data-step="1">
+              <div class="step-marker">1</div>
+              <div class="step-content">
+                <h4>Contato pelo WhatsApp</h4>
+                <p>
+                  Você nos chama, conta o que precisa e já recebe uma estimativa inicial. Rápido e
+                  sem burocracia.
+                </p>
+              </div>
+            </li>
+            <li class="process-step" data-step="2">
+              <div class="step-marker">2</div>
+              <div class="step-content">
+                <h4>Visita técnica gratuita</h4>
+                <p>
+                  Nossa equipe vai até o local, avalia as condições e entrega um orçamento detalhado
+                  sem compromisso.
+                </p>
+              </div>
+            </li>
+            <li class="process-step" data-step="3">
+              <div class="step-marker">3</div>
+              <div class="step-content">
+                <h4>Execução profissional</h4>
+                <p>
+                  Preparação completa, pintura com técnica e acabamento impecável. Acompanhamento
+                  diário do progresso.
+                </p>
+              </div>
+            </li>
+            <li class="process-step" data-step="4">
+              <div class="step-marker">4</div>
+              <div class="step-content">
+                <h4>Entrega com garantia</h4>
+                <p>
+                  Vistoria final com você, limpeza completa do ambiente e garantia por escrito do
+                  serviço.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq-section" id="faq">
+        <div class="faq-header">
+          <span class="section-tag">Dúvidas frequentes</span>
+          <h2 class="section-title">Perguntas que recebemos bastante</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            Se não achar sua dúvida aqui, chama a gente no WhatsApp.
+          </p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              Quanto tempo demora uma pintura predial ou residencial?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Depende do tamanho e das condições do imóvel, mas a maioria das pinturas residenciais
+              fica pronta entre 3 e 7 dias úteis, e prédios costumam levar de 2 a 5 semanas. Na
+              visita técnica gratuita, passamos um prazo estimado por escrito.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              O orçamento é realmente gratuito?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Sim, sem pegadinha. Um técnico vai até o local, avalia as condições da superfície e
+              entrega um orçamento fechado — sem custo e sem compromisso de fechar com a gente.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Preciso desocupar o imóvel durante a obra?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Na maioria dos casos, não. Organizamos o trabalho por cômodos ou fachadas para você
+              continuar usando o restante do imóvel normalmente. Em situações específicas,
+              explicamos isso já no orçamento.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Quais marcas de tinta vocês usam?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Trabalhamos com linhas profissionais da Suvinil, Coral e Sherwin-Williams. A indicação
+              da tinta ideal depende da superfície e do resultado que você busca — isso é definido
+              junto com você antes de começar.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              A pintura tem garantia?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Sim, todo serviço sai com garantia por escrito contra descascamento, bolhas e manchas
+              de aplicação. O prazo exato é informado no orçamento, de acordo com o serviço
+              contratado.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>
+              Vocês atendem em quais regiões?
+              <span class="faq-icon">+</span>
+            </summary>
+            <p>
+              Atendemos todo o ABC Paulista (Santo André, São Bernardo, São Caetano e região) e a
+              Grande São Paulo. Manda a localização pelo WhatsApp que confirmamos rapidinho.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- DEPOIMENTOS -->
+      <section class="section testimonials-section" id="depoimentos">
+        <div class="test-header">
+          <span class="section-tag">Depoimentos</span>
+          <h2 class="section-title">Quem confiou, aprovou</h2>
+          <p class="section-sub" style="margin: 0 auto">
+            A satisfação dos nossos clientes fala por si.
+          </p>
+        </div>
+        <div class="test-grid">
+          <article class="test-card" data-tilt>
+            <div class="test-quote-mark">"</div>
+            <div class="test-stars">★★★★★</div>
+            <blockquote>
+              "Pintaram todo o prédio em 3 semanas, sem atraso nenhum. Ficou perfeito e o preço foi
+              justo. Já indicamos pra outros condomínios."
+            </blockquote>
+            <div class="test-author">
+              <div class="test-avatar">CM</div>
+              <div class="test-author-info">
+                <strong>Carlos M.</strong>
+                <span>Síndico — Santo André</span>
+              </div>
+            </div>
+          </article>
+          <article class="test-card" data-tilt>
+            <div class="test-quote-mark">"</div>
+            <div class="test-stars">★★★★★</div>
+            <blockquote>
+              "A equipe foi super educada e organizada. Minha sala ficou irreconhecível — no melhor
+              sentido. Recomendo demais."
+            </blockquote>
+            <div class="test-author">
+              <div class="test-avatar">FL</div>
+              <div class="test-author-info">
+                <strong>Fernanda L.</strong>
+                <span>Proprietária — São Bernardo</span>
+              </div>
+            </div>
+          </article>
+          <article class="test-card" data-tilt>
+            <div class="test-quote-mark">"</div>
+            <div class="test-stars">★★★★★</div>
+            <blockquote>
+              "Fizeram a textura da fachada do meu comércio e o resultado ficou acima do esperado.
+              Profissionais de verdade."
+            </blockquote>
+            <div class="test-author">
+              <div class="test-avatar">RS</div>
+              <div class="test-author-info">
+                <strong>Roberto S.</strong>
+                <span>Empresário — São Caetano</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="contato">
+        <div class="cta-bg-text">PINTURA</div>
+        <div class="cta-content">
+          <span class="section-tag">Orçamento grátis</span>
+          <h2 class="section-title">Pronto para renovar<br />seu imóvel?</h2>
+          <p class="section-sub" style="margin: 0 auto 2.5rem">
+            Solicite agora seu orçamento gratuito e sem compromisso pelo WhatsApp. Respondemos em
+            minutos.
+          </p>
+          <a
+            href="#"
+            class="btn btn-whatsapp js-whatsapp"
+            data-msg="Olá! Gostaria de solicitar um orçamento de pintura."
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand-name">
+            <picture>
+              <source srcset="/images/logo-wc-gold.webp" type="image/webp" />
+              <img
+                src="/images/logo-wc-gold.png"
+                alt="W.C Pintura LTDA"
+                width="769"
+                height="732"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <p>
+            Transformando ambientes com qualidade e dedicação há mais de 15 anos no ABC Paulista e
+            Grande São Paulo.
+          </p>
+        </div>
+        <nav aria-label="Navegação do rodapé">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#trabalhos">Trabalhos</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#processo">Como funciona</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="#" class="js-whatsapp">WhatsApp</a></li>
+            <li><a href="#" class="js-email" data-show-text="true">contato@wcpintura.com.br</a></li>
+            <li><a href="#" class="js-instagram">@wcpintura</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section" id="contato">
-    <div class="cta-bg-text">PINTURA</div>
-    <div class="cta-content">
-      <span class="section-tag">Orçamento grátis</span>
-      <h2 class="section-title">Pronto para renovar<br>seu imóvel?</h2>
-      <p class="section-sub" style="margin: 0 auto 2.5rem;">Solicite agora seu orçamento gratuito e sem compromisso pelo WhatsApp. Respondemos em minutos.</p>
-      <a href="#" class="btn btn-whatsapp js-whatsapp" data-msg="Olá! Gostaria de solicitar um orçamento de pintura.">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Chamar no WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand-name"><img src="images/logo-wc-nav.jpg" alt="W.C Pintura LTDA"></div>
-        <p>Transformando ambientes com qualidade e dedicação há mais de 15 anos no ABC Paulista e Grande São Paulo.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 W.C Pintura LTDA. Todos os direitos reservados.</p>
       </div>
-      <div>
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#trabalhos">Trabalhos</a></li>
-          <li><a href="#diferenciais">Diferenciais</a></li>
-          <li><a href="#processo">Como funciona</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-        </ul>
+    </footer>
+
+    <!-- WHATSAPP FAB -->
+    <a
+      href="#"
+      class="whatsapp-fab js-whatsapp"
+      data-msg="Olá! Gostaria de um orçamento."
+      aria-label="WhatsApp"
+      id="fab"
+    >
+      <div class="fab-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
       </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li><a href="#" class="js-whatsapp">WhatsApp</a></li>
-          <li><a href="#" class="js-email" data-show-text="true">contato@wcpintura.com.br</a></li>
-          <li><a href="#" class="js-instagram">@wcpintura</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 W.C Pintura LTDA. Todos os direitos reservados.</p>
-      <p>Desenvolvido por <a href="https://bgdev.com.br">BG Dev</a></p>
-    </div>
-  </footer>
+      <div class="fab-tooltip">Fale conosco!</div>
+    </a>
 
-  <!-- WHATSAPP FAB -->
-  <a href="#" class="whatsapp-fab js-whatsapp" data-msg="Olá! Gostaria de um orçamento." aria-label="WhatsApp" id="fab">
-    <div class="fab-inner">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </div>
-    <div class="fab-tooltip">Fale conosco!</div>
-  </a>
-
-  <!-- GSAP + plugins (must load before the inline script below uses them) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-    // ── CONTATO (WhatsApp / e-mail / Instagram) ──
-    // Preenche todos os links a partir de window.WC_CONTACT (definido no topo do body).
-    (function wireContactLinks() {
-      const { whatsapp, email, instagram } = window.WC_CONTACT;
-
-      document.querySelectorAll('.js-whatsapp').forEach(el => {
-        const msg = el.dataset.msg;
-        el.href = `https://wa.me/${whatsapp}` + (msg ? `?text=${encodeURIComponent(msg)}` : '');
-      });
-
-      document.querySelectorAll('.js-email').forEach(el => {
-        el.href = `mailto:${email}`;
-        if (el.dataset.showText) el.textContent = email;
-      });
-
-      document.querySelectorAll('.js-instagram').forEach(el => {
-        if (instagram) {
-          el.href = instagram;
-          el.target = '_blank';
-          el.rel = 'noopener';
-        } else {
-          el.removeAttribute('href');
-          el.setAttribute('aria-disabled', 'true');
-        }
-      });
-
-      const schema = document.getElementById('business-schema');
-      if (schema) {
-        try {
-          const data = JSON.parse(schema.textContent);
-          data.telephone = `+${whatsapp}`;
-          data.email = email;
-          if (instagram) data.sameAs = [instagram];
-          schema.textContent = JSON.stringify(data);
-        } catch (e) { /* schema markup left untouched if parsing fails */ }
-      }
-    })();
-
-    // ── MOTION PREFERENCE ──
-    // Usuários que pedem "reduzir movimento" no sistema não recebem cursor
-    // customizado, blobs flutuantes, tilt 3D, botões magnéticos nem parallax.
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Helper: anima ao entrar na tela, ou já mostra no estado final se reduceMotion.
-    function revealFrom(targets, vars) {
-      if (reduceMotion) {
-        gsap.set(targets, { opacity: 1, x: 0, y: 0, rotation: 0 });
-        return;
-      }
-      // gsap.from() infere o valor final ("auto") lendo o estilo computado no
-      // momento da chamada; em itens de CSS Grid isso pode capturar um valor
-      // (ex: opacity 0) que nunca é corrigido, deixando o elemento invisível
-      // para sempre mesmo com a animação "concluída". gsap.fromTo() com valor
-      // final explícito elimina essa ambiguidade.
-      const { scrollTrigger, duration, stagger, ease, delay, ...fromProps } = vars;
-      const toProps = { scrollTrigger, duration, stagger, ease, delay };
-      Object.keys(fromProps).forEach(key => {
-        toProps[key] = key === 'opacity' ? 1 : 0;
-      });
-      gsap.fromTo(targets, fromProps, toProps);
-    }
-
-    // ── CUSTOM CURSOR ──
-    if (!reduceMotion) {
-      const cursor = document.getElementById('cursor');
-      const cursorDot = document.getElementById('cursorDot');
-      let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
-
-      document.body.classList.add('custom-cursor-active');
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        gsap.to(cursorDot, { x: mouseX, y: mouseY, duration: 0.1 });
-      });
-
-      function animateCursor() {
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-        requestAnimationFrame(animateCursor);
-      }
-      animateCursor();
-
-      document.querySelectorAll('a, button, .service-card, .diff-card, .test-card').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-      });
-    }
-
-    // ── LOADER ──
-    const loader = document.getElementById('loader');
-    const loaderFill = document.getElementById('loaderFill');
-    const loaderLogo = document.querySelector('.loader-logo');
-
-    if (reduceMotion) {
-      loader.style.display = 'none';
-      animateHero();
-    } else {
-      gsap.to(loaderLogo, { opacity: 1, duration: 0.6, delay: 0.2 });
-      gsap.to(loaderFill, {
-        width: '100%', duration: 1.8, delay: 0.4,
-        ease: 'power2.inOut',
-        onComplete: () => {
-          gsap.to(loader, {
-            yPercent: -100,
-            duration: 0.8,
-            ease: 'power3.inOut',
-            onComplete: () => {
-              loader.style.display = 'none';
-              animateHero();
-            }
-          });
-        }
-      });
-    }
-
-    // ── HERO ANIMATION ──
-    function animateHero() {
-      if (reduceMotion) {
-        gsap.set(['.hero-badge', '.line-inner', '.hero-sub', '.hero-buttons', '.hero-stats'], { opacity: 1, y: 0, scale: 1 });
-        gsap.set('.highlight-stroke path', { strokeDashoffset: 0 });
-        return;
-      }
-
-      const tl = gsap.timeline();
-
-      tl.to('.hero-badge', {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-      })
-      .to('.line-inner', {
-        y: 0,
-        duration: 1,
-        stagger: 0.12,
-        ease: 'power3.out'
-      }, '-=0.5')
-      .to('.highlight-stroke path', {
-        strokeDashoffset: 0,
-        duration: 0.8,
-        ease: 'power2.out'
-      }, '-=0.3')
-      .to('.hero-sub', {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-      }, '-=0.4')
-      .to('.hero-buttons', {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-      }, '-=0.4')
-      .fromTo('.hero-stats', {
-        opacity: 0, y: 40
-      }, {
-        opacity: 1, y: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-      }, '-=0.3');
-    }
-
-    // ── NAV SCROLL ──
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // ── MOBILE MENU ──
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // ── SCROLL ANIMATIONS ──
-
-    // Services cards
-    revealFrom('.service-card', {
-      scrollTrigger: { trigger: '.services-grid', start: 'top 80%' },
-      y: 60, opacity: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
-
-    // Services header
-    revealFrom('.services-header > div > *', {
-      scrollTrigger: { trigger: '.services-header', start: 'top 85%' },
-      y: 40, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // Works grid
-    revealFrom('.work-item', {
-      scrollTrigger: { trigger: '.works-grid', start: 'top 80%' },
-      y: 50, opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: 'power3.out'
-    });
-
-    // Works header
-    revealFrom('.works-header > *', {
-      scrollTrigger: { trigger: '.works-header', start: 'top 85%' },
-      y: 40, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // Diff cards
-    revealFrom('.diff-card', {
-      scrollTrigger: { trigger: '.diff-grid', start: 'top 80%' },
-      y: 50, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // Diff header
-    revealFrom('.diff-header > *', {
-      scrollTrigger: { trigger: '.diff-header', start: 'top 85%' },
-      y: 40, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // Process steps
-    document.querySelectorAll('.process-step').forEach((step, i) => {
-      ScrollTrigger.create({
-        trigger: step,
-        start: 'top 80%',
-        onEnter: () => step.classList.add('active')
-      });
-      revealFrom(step, {
-        x: -40, opacity: 0,
-        duration: 0.7,
-        delay: i * 0.15,
-        ease: 'power3.out'
-      });
-    });
-
-    // Process line fill
-    if (reduceMotion) {
-      document.getElementById('processLineFill').style.height = '100%';
-    } else {
-      ScrollTrigger.create({
-        trigger: '.process-track',
-        start: 'top 70%',
-        end: 'bottom 50%',
-        scrub: 1,
-        onUpdate: (self) => {
-          document.getElementById('processLineFill').style.height = (self.progress * 100) + '%';
-        }
-      });
-    }
-
-    // Process header
-    revealFrom('.process-header > *', {
-      scrollTrigger: { trigger: '.process-header', start: 'top 85%' },
-      y: 40, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // Testimonials
-    revealFrom('.test-card', {
-      scrollTrigger: { trigger: '.test-grid', start: 'top 80%' },
-      y: 50, opacity: 0,
-      rotation: 3,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
-
-    revealFrom('.test-header > *', {
-      scrollTrigger: { trigger: '.test-header', start: 'top 85%' },
-      y: 40, opacity: 0,
-      duration: 0.7,
-      stagger: 0.1,
-      ease: 'power3.out'
-    });
-
-    // CTA
-    revealFrom('.cta-content > *', {
-      scrollTrigger: { trigger: '.cta-content', start: 'top 80%' },
-      y: 40, opacity: 0,
-      duration: 0.8,
-      stagger: 0.12,
-      ease: 'power3.out'
-    });
-
-    // CTA bg text parallax
-    if (!reduceMotion) {
-      gsap.to('.cta-bg-text', {
-        scrollTrigger: {
-          trigger: '.cta-section',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1
-        },
-        x: -100,
-        ease: 'none'
-      });
-    }
-
-    // ── TILT EFFECT + MAGNETIC BUTTONS ── (desativados quando reduceMotion)
-    if (!reduceMotion) {
-      document.querySelectorAll('[data-tilt]').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          const rotateX = ((y - centerY) / centerY) * -4;
-          const rotateY = ((x - centerX) / centerX) * 4;
-          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-        });
-      });
-
-      document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const rect = btn.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-          gsap.to(btn, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: 'power2.out' });
-        });
-        btn.addEventListener('mouseleave', () => {
-          gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
-        });
-      });
-    }
-
-    // ── FAB ENTRANCE ──
-    if (reduceMotion) {
-      gsap.set('#fab', { scale: 1, opacity: 1 });
-    } else {
-      gsap.fromTo('#fab',
-        { scale: 0, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.6, delay: 3, ease: 'back.out(1.7)' }
-      );
-    }
-
-    // ── SMOOTH SCROLL ──
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.length <= 1) return; // href="#" (ex: logo) — deixa o navegador ignorar
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          gsap.to(window, {
-            scrollTo: { y: target, offsetY: 72 },
-            duration: 1,
-            ease: 'power3.inOut'
-          });
-        }
-      });
-    });
-
-    // ── FOOTER REVEAL ──
-    revealFrom('.footer-inner > div', {
-      scrollTrigger: { trigger: '.footer', start: 'top 90%' },
-      y: 30, opacity: 0,
-      duration: 0.7,
-      stagger: 0.15,
-      ease: 'power3.out'
-    });
-  </script>
-
-</body>
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,203 @@
+/* ── RESET & ROOT VARIABLES ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #0f3460;
+  --brand-mid: #1a4a7a;
+  --brand-light: #e6eef8;
+  --brand-dark: #091f3a;
+  --accent: #d4a843;
+  --accent-light: #fff8e7;
+  --text: #1a1a1a;
+  --text-sec: #555;
+  --text-muted: #767676;
+  --bg: #fafaf7;
+  --white: #ffffff;
+  --border: #e0ddd5;
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'DM Serif Display', serif;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Cursor customizado só é ativado via JS (custom-cursor-active), e nunca
+   quando o usuário pediu "reduzir movimento" — assim o cursor do sistema
+   nunca some caso o JS falhe ao carregar. */
+body.custom-cursor-active,
+body.custom-cursor-active .btn,
+body.custom-cursor-active .service-card,
+body.custom-cursor-active .diff-card,
+body.custom-cursor-active .test-card,
+body.custom-cursor-active .whatsapp-fab,
+body.custom-cursor-active .faq-item summary,
+body.custom-cursor-active .ba-range {
+  cursor: none;
+}
+
+/* ── SKIP LINK (acessibilidade) ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 10001;
+  background: var(--white);
+  color: var(--brand);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--brand);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    width 0.3s,
+    height 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.cursor.hover {
+  width: 50px;
+  height: 50px;
+  background: rgba(15, 52, 96, 0.15);
+  border-color: var(--accent);
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--brand);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 768px) {
+  .cursor,
+  .cursor-dot {
+    display: none;
+  }
+  body {
+    cursor: auto;
+  }
+}
+
+/* ── LOADER ── */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--brand-dark);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.loader-logo {
+  opacity: 0;
+  display: flex;
+}
+.loader-logo img {
+  height: 110px;
+  width: auto;
+}
+.loader-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.loader-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+/* ── SECTIONS (compartilhado entre várias seções) ── */
+.section {
+  padding: 7rem 2rem;
+}
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.section-sub {
+  font-size: 1.1rem;
+  color: var(--text-sec);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ── ACESSIBILIDADE: FOCO DE TECLADO ── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible {
+  outline-color: var(--white);
+  outline-offset: 3px;
+}
+
+/* ── PREFERS-REDUCED-MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .badge-dot,
+  .fab-inner::before {
+    animation: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 1.5rem;
+  }
+}

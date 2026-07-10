@@ -1,0 +1,21 @@
+/**
+ * Ponto de entrada dos estilos — cada seção do site vive em seu próprio
+ * módulo. A ordem importa apenas para legibilidade em devtools; não há
+ * dependência de cascata entre os arquivos além das variáveis de :root
+ * definidas em base.css.
+ */
+@import './base.css';
+@import './header.css';
+@import './buttons.css';
+@import './hero.css';
+@import './about.css';
+@import './services.css';
+@import './works.css';
+@import './before-after.css';
+@import './differentials.css';
+@import './process.css';
+@import './faq.css';
+@import './testimonials.css';
+@import './cta.css';
+@import './footer.css';
+@import './whatsapp-fab.css';
