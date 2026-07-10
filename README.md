@@ -66,10 +66,3 @@ npm run format        # formata todos os arquivos
 npm run format:check  # apenas verifica, sem alterar
 ```
 
-## Configuração antes de publicar
-
-Os dados de contato (WhatsApp, e-mail e Instagram) ficam centralizados em [`src/scripts/contact.js`](src/scripts/contact.js) — atualize o objeto `CONTACT` com os dados reais da empresa antes de publicar. Essa mesma configuração alimenta automaticamente os botões de WhatsApp, o rodapé e os dados estruturados de SEO (JSON-LD) no `index.html`.
-
-## Imagens e formato WebP
-
-Todas as imagens em `public/images/` já possuem uma versão `.webp` equivalente, servida via `<picture>` (imagens `<img>`) ou `image-set()` (imagem de fundo do hero, em CSS), com fallback automático para `.jpg` em navegadores sem suporte a WebP. Ao substituir qualquer imagem, gere também sua versão `.webp` correspondente para manter o ganho de performance.
