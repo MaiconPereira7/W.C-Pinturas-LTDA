@@ -12,17 +12,29 @@ export function animateHero(reduceMotion) {
       scale: 1,
     });
     gsap.set('.highlight-stroke path', { strokeDashoffset: 0 });
+    gsap.set('.hero-watermark', { opacity: 1 });
     return;
   }
 
   const tl = gsap.timeline();
 
-  tl.to('.hero-badge', {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    ease: 'power3.out',
-  })
+  tl.fromTo(
+    '.hero-watermark',
+    { opacity: 0, scale: 0.9 },
+    { opacity: 1, scale: 1, duration: 2, ease: 'power1.out' },
+    0
+  );
+
+  tl.to(
+    '.hero-badge',
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+    },
+    0
+  )
     .to(
       '.line-inner',
       {

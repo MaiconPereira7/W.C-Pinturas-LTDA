@@ -148,6 +148,12 @@
       <section class="hero" id="hero">
         <div class="hero-bg-image"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-watermark" aria-hidden="true">
+          <picture>
+            <source srcset="/images/logo-wc-gold.webp" type="image/webp" />
+            <img src="/images/logo-wc-gold.png" alt="" width="769" height="732" />
+          </picture>
+        </div>
         <div class="hero-content">
           <div class="hero-badge">
             <span class="badge-dot"></span>
@@ -381,7 +387,7 @@
               Fachadas, áreas comuns, garagens e halls. Equipamentos próprios e equipe certificada
               para trabalho em altura.
             </p>
-            <div class="card-arrow">Saiba mais →</div>
+            <a class="card-arrow" href="#servico-predial">Saiba mais →</a>
           </article>
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -405,7 +411,7 @@
               Casas e apartamentos com cores sob medida, tintas de primeira linha e acabamento
               perfeito.
             </p>
-            <div class="card-arrow">Saiba mais →</div>
+            <a class="card-arrow" href="#servico-residencial">Saiba mais →</a>
           </article>
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -429,7 +435,7 @@
               Grafiato, textura rústica, cimento queimado e marmorizado. Paredes que contam uma
               história.
             </p>
-            <div class="card-arrow">Saiba mais →</div>
+            <a class="card-arrow" href="#servico-textura">Saiba mais →</a>
           </article>
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -453,8 +459,280 @@
               Limpeza, massa corrida, selador e impermeabilização. A base certa para um resultado
               duradouro.
             </p>
-            <div class="card-arrow">Saiba mais →</div>
+            <a class="card-arrow" href="#servico-preparacao">Saiba mais →</a>
           </article>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS EM DETALHE -->
+      <section class="section services-detail-section" id="servicos-detalhes">
+        <div class="services-detail-header">
+          <span class="section-tag">Como trabalhamos</span>
+          <h2 class="section-title">Cada serviço, explicado a fundo</h2>
+          <p class="section-sub">
+            O que está incluso em cada frente de trabalho, do orçamento à entrega.
+          </p>
+        </div>
+
+        <div class="service-detail-item" id="servico-predial">
+          <div class="service-detail-media">
+            <picture>
+              <source srcset="/images/trabalho-predial.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-predial.jpg"
+                alt="Fachada de prédio residencial pintada"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-detail-content">
+            <span class="service-detail-num">01 — Pintura predial</span>
+            <h3>Fachadas, áreas comuns e trabalho em altura</h3>
+            <p>
+              Cuidamos de fachadas, halls de entrada, garagens e escadarias com equipe certificada
+              para trabalho em altura e equipamentos próprios — sem depender de terceiros nem
+              atrasar o cronograma do condomínio.
+            </p>
+            <ul class="service-detail-list">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Equipe certificada NR-35 e equipamentos próprios de acesso
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Isolamento e sinalização de segurança durante a obra
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Cronograma por blocos ou torres, sem parar a rotina do prédio
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-primary js-whatsapp"
+              data-msg="Olá! Gostaria de um orçamento de pintura predial."
+              >Pedir orçamento de pintura predial</a
+            >
+          </div>
+        </div>
+
+        <div class="service-detail-item" id="servico-residencial">
+          <div class="service-detail-media">
+            <picture>
+              <source srcset="/images/trabalho-residencial.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-residencial.jpg"
+                alt="Casa residencial com pintura externa"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-detail-content">
+            <span class="service-detail-num">02 — Pintura residencial</span>
+            <h3>Casas e apartamentos, do quarto à fachada</h3>
+            <p>
+              Cores sob medida e tintas de primeira linha (Suvinil, Coral e Sherwin-Williams), com o
+              mesmo cuidado em cada cômodo — interno ou externo.
+            </p>
+            <ul class="service-detail-list">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Consultoria de cores e acabamento antes de começar
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Proteção de móveis, pisos e esquadrias
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Pequenos reparos em trincas e furos já inclusos
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-primary js-whatsapp"
+              data-msg="Olá! Gostaria de um orçamento de pintura residencial."
+              >Pedir orçamento de pintura residencial</a
+            >
+          </div>
+        </div>
+
+        <div class="service-detail-item" id="servico-textura">
+          <div class="service-detail-media">
+            <picture>
+              <source srcset="/images/trabalho-textura.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-textura.jpg"
+                alt="Aplicação de textura em parede"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-detail-content">
+            <span class="service-detail-num">03 — Textura e efeitos</span>
+            <h3>Grafiato, cimento queimado e acabamentos decorativos</h3>
+            <p>
+              Texturas e efeitos que dão personalidade à parede — e ainda ajudam a disfarçar
+              pequenas imperfeições da superfície.
+            </p>
+            <ul class="service-detail-list">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Amostra da textura aplicada antes de fechar o serviço
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Grafiato, riscado, cimento queimado e marmorizado
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Acabamento resistente a sol, chuva e maresia
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-primary js-whatsapp"
+              data-msg="Olá! Tenho interesse em textura/efeito especial para minha parede."
+              >Pedir orçamento de textura</a
+            >
+          </div>
+        </div>
+
+        <div class="service-detail-item" id="servico-preparacao">
+          <div class="service-detail-media">
+            <picture>
+              <source srcset="/images/trabalho-interior.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-interior.jpg"
+                alt="Sala de estar com pintura interna"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="service-detail-content">
+            <span class="service-detail-num">04 — Preparação e tratamento</span>
+            <h3>A base é o que garante a durabilidade</h3>
+            <p>
+              Antes da primeira demão, tratamos a superfície: limpeza, correção de trincas, selador
+              e impermeabilização — o passo que a maioria das pinturas pula.
+            </p>
+            <ul class="service-detail-list">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Lavagem e remoção de mofo ou fungos
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Correção de trincas, furos e imperfeições
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Selador, fundo preparador e impermeabilização
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="btn btn-primary js-whatsapp"
+              data-msg="Olá! Gostaria de saber mais sobre preparação e tratamento de superfície."
+              >Pedir orçamento de preparação</a
+            >
+          </div>
         </div>
       </section>
 

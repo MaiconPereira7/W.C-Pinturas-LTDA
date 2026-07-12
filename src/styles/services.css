@@ -88,9 +88,13 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--brand);
+  text-decoration: none;
   opacity: 0;
   transform: translateX(-10px);
   transition: all 0.4s;
+}
+.service-card .card-arrow:hover {
+  color: var(--accent-hover);
 }
 .service-card:hover .card-arrow {
   opacity: 1;
@@ -100,6 +104,15 @@
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Telas touch não têm :hover — o link "Saiba mais" fica sempre visível
+   nelas, em vez de depender do hover do card para aparecer. */
+@media (hover: none) {
+  .service-card .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

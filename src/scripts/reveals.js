@@ -60,6 +60,33 @@ export function initScrollReveals(reduceMotion) {
     ease: 'power3.out',
   });
 
+  // Serviços em detalhe
+  document.querySelectorAll('.service-detail-item').forEach((item) => {
+    revealFrom(reduceMotion, item.querySelector('.service-detail-media'), {
+      scrollTrigger: { trigger: item, start: 'top 80%' },
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+    });
+    revealFrom(reduceMotion, item.querySelectorAll('.service-detail-content > *'), {
+      scrollTrigger: { trigger: item, start: 'top 80%' },
+      y: 30,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.08,
+      ease: 'power3.out',
+    });
+  });
+  revealFrom(reduceMotion, '.services-detail-header > *', {
+    scrollTrigger: { trigger: '.services-detail-header', start: 'top 85%' },
+    y: 40,
+    opacity: 0,
+    duration: 0.7,
+    stagger: 0.1,
+    ease: 'power3.out',
+  });
+
   // Trabalhos (portfólio)
   revealFrom(reduceMotion, '.work-item', {
     scrollTrigger: { trigger: '.works-grid', start: 'top 80%' },

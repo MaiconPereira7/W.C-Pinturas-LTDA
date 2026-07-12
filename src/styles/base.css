@@ -8,18 +8,20 @@
 }
 
 :root {
-  --brand: #0f3460;
-  --brand-mid: #1a4a7a;
-  --brand-light: #e6eef8;
-  --brand-dark: #091f3a;
-  --accent: #d4a843;
-  --accent-light: #fff8e7;
+  --brand: #0b2545;
+  --brand-mid: #13315c;
+  --brand-light: #e8eff8;
+  --brand-dark: #061527;
+  --accent: #c9952a;
+  --accent-hover: #e0ac3a;
+  --accent-glow: rgba(201, 149, 42, 0.35);
+  --accent-light: #fff6de;
   --text: #1a1a1a;
-  --text-sec: #555;
+  --text-sec: #4a4a4a;
   --text-muted: #767676;
-  --bg: #fafaf7;
+  --bg: #f8f7f4;
   --white: #ffffff;
-  --border: #e0ddd5;
+  --border: #ddd9d0;
   --font-body: 'Inter', sans-serif;
   --font-display: 'DM Serif Display', serif;
 }
@@ -152,13 +154,23 @@ body.custom-cursor-active .ba-range {
   padding: 7rem 2rem;
 }
 .section-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--brand);
   margin-bottom: 1rem;
+}
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 .section-title {
   font-family: var(--font-display);

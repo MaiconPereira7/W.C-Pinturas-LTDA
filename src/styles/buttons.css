@@ -47,11 +47,13 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 .btn-accent {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
   color: var(--brand-dark);
 }
 .btn-accent:hover {
-  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.4);
+  box-shadow:
+    0 8px 30px var(--accent-glow),
+    0 0 0 1px var(--accent);
 }
 .btn-outline-light {
   background: rgba(255, 255, 255, 0.06);
