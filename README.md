@@ -65,4 +65,3 @@ npm run preview
 npm run format        # formata todos os arquivos
 npm run format:check  # apenas verifica, sem alterar
 ```
-

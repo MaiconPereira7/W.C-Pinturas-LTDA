@@ -184,6 +184,17 @@ body.custom-cursor-active .ba-range {
   max-width: 500px;
   line-height: 1.7;
 }
+/* Centraliza o parágrafo de apoio nos cabeçalhos de seção que são
+   centralizados (era feito via style="margin: 0 auto" inline). Inclui
+   .diff-header, que usava o mesmo inline style mas não estava na lista
+   original — sem essa regra o parágrafo perderia a centralização. */
+.diff-header .section-sub,
+.process-header .section-sub,
+.faq-header .section-sub,
+.test-header .section-sub,
+.services-detail-header .section-sub {
+  margin: 0 auto;
+}
 
 /* ── ACESSIBILIDADE: FOCO DE TECLADO ── */
 a:focus-visible,
