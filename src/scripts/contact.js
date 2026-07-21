@@ -1,19 +1,9 @@
-/**
- * Dados de contato — SUBSTITUA pelos dados reais da empresa antes de publicar.
- * Editar aqui atualiza automaticamente todos os links de WhatsApp, e-mail
- * e Instagram do site (botões, rodapé e dados estruturados de SEO).
- */
 export const CONTACT = {
-  whatsapp: '5511999999999', // SUBSTITUA: DDI+DDD+número, ex: 5511987654321
-  email: 'contato@wcpintura.com.br', // SUBSTITUA
-  instagram: '', // SUBSTITUA: ex: 'https://instagram.com/wcpintura'
+  whatsapp: '5511999999999',
+  email: 'contato@wcpintura.com.br',
+  instagram: '',
 };
 
-/**
- * Preenche todos os links `.js-whatsapp` / `.js-email` / `.js-instagram` a
- * partir de CONTACT, e sincroniza o JSON-LD (#business-schema) usado pelo
- * Google para exibir telefone/e-mail nos resultados de busca.
- */
 export function wireContactLinks() {
   const { whatsapp, email, instagram } = CONTACT;
 
@@ -46,8 +36,6 @@ export function wireContactLinks() {
       data.email = email;
       if (instagram) data.sameAs = [instagram];
       schema.textContent = JSON.stringify(data);
-    } catch {
-      // schema markup left untouched if parsing fails
-    }
+    } catch {}
   }
 }

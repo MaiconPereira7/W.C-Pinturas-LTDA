@@ -1,10 +1,5 @@
 import { gsap } from 'gsap';
 
-/**
- * Cursor customizado — só é ativado quando o usuário não pediu "reduzir
- * movimento". O cursor do sistema permanece disponível em telas pequenas
- * (ver regra `.cursor, .cursor-dot { display: none }` em base.css).
- */
 export function initCursor(reduceMotion) {
   if (reduceMotion) return;
 

@@ -1,7 +1,3 @@
-/**
- * Header fixo: alterna para fundo sólido ao rolar, e controla o menu mobile
- * (hamburger), incluindo o estado `aria-expanded` para leitores de tela.
- */
 export function initNav() {
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {

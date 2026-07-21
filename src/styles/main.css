@@ -1,9 +1,3 @@
-/**
- * Ponto de entrada dos estilos — cada seção do site vive em seu próprio
- * módulo. A ordem importa apenas para legibilidade em devtools; não há
- * dependência de cascata entre os arquivos além das variáveis de :root
- * definidas em base.css.
- */
 @import './base.css';
 @import './header.css';
 @import './buttons.css';

@@ -1,6 +1,7 @@
-/* ── DIFERENCIAIS ── */
 .diff-section {
-  background: var(--brand-dark);
+  background: var(--grad-dark);
+  background-size: 300% 300%;
+  animation: bgFlow 26s ease-in-out infinite;
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -65,7 +66,6 @@
   line-height: 1.6;
 }
 
-/* bg paint drips */
 .paint-drips {
   position: absolute;
   top: 0;

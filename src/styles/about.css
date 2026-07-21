@@ -1,6 +1,7 @@
-/* ── SOBRE ── */
 .about-section {
-  background: var(--white);
+  background: var(--grad-light);
+  background-size: 300% 300%;
+  animation: bgFlow 26s ease-in-out infinite;
 }
 .about-grid {
   max-width: 1200px;

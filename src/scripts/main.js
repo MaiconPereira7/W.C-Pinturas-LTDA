@@ -10,13 +10,20 @@ import { initLoader } from './loader.js';
 import { animateHero } from './hero.js';
 import { initNav } from './nav.js';
 import { initScrollReveals } from './reveals.js';
-import { initTiltAndMagnetic, initFabEntrance, initSmoothScroll } from './interactions.js';
+import {
+  initTiltAndMagnetic,
+  initFabEntrance,
+  initSmoothScroll,
+  initRipple,
+} from './interactions.js';
 import { initBeforeAfter } from './before-after.js';
+import { initCounters } from './counters.js';
+import { initTextReveals } from './text-reveal.js';
+import { initParallax } from './parallax.js';
+import { initFaqAccordion } from './faq.js';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// Usuários que pedem "reduzir movimento" no sistema não recebem cursor
-// customizado, tilt 3D, botões magnéticos, parallax nem o loader animado.
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 wireContactLinks();
@@ -27,5 +34,10 @@ initTiltAndMagnetic(reduceMotion);
 initFabEntrance(reduceMotion);
 initSmoothScroll();
 initBeforeAfter();
+initCounters(reduceMotion);
+initTextReveals(reduceMotion);
+initParallax(reduceMotion);
+initRipple(reduceMotion);
+initFaqAccordion(reduceMotion);
 
 initLoader(reduceMotion, () => animateHero(reduceMotion));

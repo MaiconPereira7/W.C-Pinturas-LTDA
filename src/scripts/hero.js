@@ -1,9 +1,5 @@
 import { gsap } from 'gsap';
 
-/**
- * Timeline de entrada do hero (badge → título → sublinhado dourado →
- * parágrafo → botões → card de estatísticas). Chamada após o loader sumir.
- */
 export function animateHero(reduceMotion) {
   if (reduceMotion) {
     gsap.set(['.hero-badge', '.line-inner', '.hero-sub', '.hero-buttons', '.hero-stats'], {

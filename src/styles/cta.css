@@ -1,10 +1,11 @@
-/* ── CTA FINAL ── */
 .cta-section {
   padding: 8rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: var(--white);
+  background: var(--grad-light);
+  background-size: 300% 300%;
+  animation: bgFlow 26s ease-in-out infinite;
 }
 .cta-content {
   position: relative;

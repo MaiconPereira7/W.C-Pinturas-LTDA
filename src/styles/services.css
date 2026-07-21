@@ -1,19 +1,42 @@
-/* ── SERVIÇOS ── */
 .services-section {
-  background: var(--bg);
+  background: var(--grad-light);
+  background-size: 300% 300%;
+  animation: bgFlow 26s ease-in-out infinite;
 }
 .services-header {
   max-width: 1200px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 2.5rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
 }
+
+.services-guarantee {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.1rem 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.services-guarantee svg {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  color: var(--accent);
+}
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -25,7 +48,10 @@
   padding: 2.2rem 1.8rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 .service-card:hover {
   transform: translateY(-8px);
@@ -56,10 +82,12 @@
   justify-content: center;
   margin-bottom: 1.5rem;
   transition: all 0.4s;
+  animation: service-icon-pulse 3s ease-in-out infinite;
 }
 .service-card:hover .service-icon-wrap {
   background: var(--brand);
   transform: rotate(-5deg) scale(1.05);
+  animation-play-state: paused;
 }
 .service-icon-wrap svg {
   width: 26px;
@@ -69,6 +97,16 @@
 }
 .service-card:hover .service-icon-wrap svg {
   color: var(--white);
+}
+
+@keyframes service-icon-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.04);
+  }
 }
 .service-card h3 {
   font-size: 1.15rem;
@@ -81,7 +119,7 @@
   line-height: 1.6;
 }
 .service-card .card-arrow {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   margin-top: 1.2rem;
@@ -101,14 +139,20 @@
   transform: translateX(0);
 }
 
+.card-arrow span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+.card-arrow:hover span {
+  transform: translateX(5px);
+}
+
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Telas touch não têm :hover — o link "Saiba mais" fica sempre visível
-   nelas, em vez de depender do hover do card para aparecer. */
 @media (hover: none) {
   .service-card .card-arrow {
     opacity: 1;
@@ -122,5 +166,15 @@
   }
   .services-header {
     text-align: center;
+  }
+  .services-guarantee {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-icon-wrap {
+    animation: none;
   }
 }

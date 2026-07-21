@@ -12,7 +12,6 @@
     <meta name="theme-color" content="#0F3460" />
     <link rel="canonical" href="https://www.wcpintura.com.br/" />
 
-    <!-- Open Graph / WhatsApp / Facebook / Instagram -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="W.C Pintura LTDA" />
@@ -31,7 +30,6 @@
     <meta property="og:image:alt" content="Fachada de imóvel pintada pela W.C Pintura LTDA" />
     <meta property="og:url" content="https://www.wcpintura.com.br/" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -54,9 +52,6 @@
       rel="stylesheet"
     />
 
-    <!-- Preload do LCP (imagem de fundo do hero) — evita descoberta tardia via CSS.
-         Aponta para o WebP (mesmo formato que o image-set() em hero.css efetivamente
-         carrega em navegadores modernos) para não baixar o JPG duas vezes. -->
     <link
       rel="preload"
       as="image"
@@ -74,7 +69,6 @@
       media="(max-width: 768px)"
     />
 
-    <!-- SUBSTITUA os dados abaixo pelos dados reais da empresa antes de publicar -->
     <script type="application/ld+json" id="business-schema">
       {
         "@context": "https://schema.org",
@@ -161,11 +155,9 @@
       </symbol>
     </svg>
 
-    <!-- CURSOR -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- LOADER -->
     <div class="loader" id="loader">
       <div class="loader-logo">
         <picture>
@@ -212,7 +204,6 @@
     </header>
 
     <main id="main-content">
-      <!-- HERO -->
       <section class="hero" id="hero">
         <div class="hero-bg-image"></div>
         <div class="hero-overlay"></div>
@@ -262,7 +253,6 @@
         </div>
       </section>
 
-      <!-- HERO STATS -->
       <div class="hero-stats-wrap">
         <div class="hero-stats" id="heroStats">
           <div class="hero-stat">
@@ -281,7 +271,10 @@
                 />
               </svg>
             </div>
-            <div class="hero-stat-info"><strong>15+</strong><span>Anos de experiência</span></div>
+            <div class="hero-stat-info">
+              <strong data-count-to="15" data-suffix="+">0+</strong>
+              <span>Anos de experiência</span>
+            </div>
           </div>
           <div class="hero-stat-sep"></div>
           <div class="hero-stat">
@@ -300,7 +293,10 @@
                 />
               </svg>
             </div>
-            <div class="hero-stat-info"><strong>500+</strong><span>Projetos concluídos</span></div>
+            <div class="hero-stat-info">
+              <strong data-count-to="500" data-suffix="+">0+</strong>
+              <span>Projetos concluídos</span>
+            </div>
           </div>
           <div class="hero-stat-sep"></div>
           <div class="hero-stat">
@@ -319,7 +315,10 @@
                 />
               </svg>
             </div>
-            <div class="hero-stat-info"><strong>98%</strong><span>Clientes satisfeitos</span></div>
+            <div class="hero-stat-info">
+              <strong data-count-to="98" data-suffix="%">0%</strong>
+              <span>Clientes satisfeitos</span>
+            </div>
           </div>
           <div class="hero-stat-sep"></div>
           <div class="hero-stat">
@@ -348,7 +347,6 @@
         </div>
       </div>
 
-      <!-- SOBRE -->
       <section class="section about-section" id="sobre">
         <div class="about-grid">
           <div class="about-media">
@@ -399,17 +397,33 @@
         </div>
       </section>
 
-      <!-- SERVIÇOS -->
       <section class="section services-section" id="servicos">
         <div class="services-header">
           <div>
             <span class="section-tag">Serviços</span>
-            <h2 class="section-title">Soluções completas<br />em pintura</h2>
+            <h2 class="section-title">Soluções completas<br />em pintura predial</h2>
             <p class="section-sub">
               Do planejamento à entrega final, cada detalhe é pensado para transformar seu espaço.
             </p>
           </div>
         </div>
+        <p class="services-guarantee">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          Todos os serviços executados possuem garantia de 5 anos e são acompanhados por engenheiro
+          civil e de segurança e medicina do trabalho devidamente credenciado.
+        </p>
         <div class="services-grid">
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -428,36 +442,12 @@
                 />
               </svg>
             </div>
-            <h3>Pintura predial</h3>
+            <h3>Pinturas de Paredes e Pisos</h3>
             <p>
-              Fachadas, áreas comuns, garagens e halls. Equipamentos próprios e equipe certificada
-              para trabalho em altura.
+              Pintura interna e externa em paredes, pisos e fachadas, com preparo completo da
+              superfície e tintas de primeira linha.
             </p>
-            <a class="card-arrow" href="#servico-predial">Saiba mais →</a>
-          </article>
-          <article class="service-card" data-tilt>
-            <div class="service-card-accent"></div>
-            <div class="service-icon-wrap">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.8"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819"
-                />
-              </svg>
-            </div>
-            <h3>Pintura residencial</h3>
-            <p>
-              Casas e apartamentos com cores sob medida, tintas de primeira linha e acabamento
-              perfeito.
-            </p>
-            <a class="card-arrow" href="#servico-residencial">Saiba mais →</a>
+            <a class="card-arrow" href="#servico-pinturas">Saiba mais <span>→</span></a>
           </article>
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -476,12 +466,84 @@
                 />
               </svg>
             </div>
-            <h3>Textura e efeitos</h3>
+            <h3>Texturas e Grafiatos</h3>
             <p>
-              Grafiato, textura rústica, cimento queimado e marmorizado. Paredes que contam uma
-              história.
+              Grafiato, textura rústica, cimento queimado e marmorizado — acabamentos que dão
+              personalidade e escondem imperfeições.
             </p>
-            <a class="card-arrow" href="#servico-textura">Saiba mais →</a>
+            <a class="card-arrow" href="#servico-pinturas">Saiba mais <span>→</span></a>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 2.25c-3.5 4.25-6.75 8.25-6.75 12a6.75 6.75 0 0013.5 0c0-3.75-3.25-7.75-6.75-12z"
+                />
+              </svg>
+            </div>
+            <h3>Lavagem de Revestimentos</h3>
+            <p>
+              Lavagem de alta pressão em fachadas e revestimentos, removendo sujeira, mofo e
+              poluição antes de qualquer acabamento.
+            </p>
+            <a class="card-arrow" href="#servico-hidrojateamento">Saiba mais <span>→</span></a>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 3.75h6v6h-6z M14.25 3.75h6v6h-6z M3.75 14.25h6v6h-6z M14.25 14.25h6v6h-6z"
+                />
+              </svg>
+            </div>
+            <h3>Rejunte de Revestimentos</h3>
+            <p>
+              Rejunte e correção de juntas em pisos e revestimentos cerâmicos, evitando infiltração
+              e desgaste prematuro.
+            </p>
+            <a class="card-arrow" href="#servico-tratamento">Saiba mais <span>→</span></a>
+          </article>
+          <article class="service-card" data-tilt>
+            <div class="service-card-accent"></div>
+            <div class="service-icon-wrap">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.8"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3l7 3v5.5c0 4.5-3 8.25-7 9.5-4-1.25-7-5-7-9.5V6l7-3z"
+                />
+              </svg>
+            </div>
+            <h3>Impermeabilizações</h3>
+            <p>
+              Impermeabilização de lajes, terraços e áreas expostas, protegendo a estrutura contra
+              infiltrações e umidade.
+            </p>
+            <a class="card-arrow" href="#servico-tratamento">Saiba mais <span>→</span></a>
           </article>
           <article class="service-card" data-tilt>
             <div class="service-card-accent"></div>
@@ -500,17 +562,16 @@
                 />
               </svg>
             </div>
-            <h3>Preparação e tratamento</h3>
+            <h3>Tratamento de Superfícies</h3>
             <p>
-              Limpeza, massa corrida, selador e impermeabilização. A base certa para um resultado
-              duradouro.
+              Correção de trincas, bolhas e imperfeições antes da pintura — a base que garante
+              durabilidade ao acabamento.
             </p>
-            <a class="card-arrow" href="#servico-preparacao">Saiba mais →</a>
+            <a class="card-arrow" href="#servico-tratamento">Saiba mais <span>→</span></a>
           </article>
         </div>
       </section>
 
-      <!-- SERVIÇOS EM DETALHE -->
       <section class="section services-detail-section" id="servicos-detalhes">
         <div class="services-detail-header">
           <span class="section-tag">Como trabalhamos</span>
@@ -520,22 +581,11 @@
           </p>
         </div>
 
-        <div class="service-detail-item" id="servico-predial">
-          <div class="service-detail-media">
-            <picture>
-              <source srcset="/images/trabalho-predial.webp" type="image/webp" />
-              <img
-                src="/images/trabalho-predial.jpg"
-                alt="Fachada de prédio residencial pintada"
-                width="1000"
-                height="1334"
-                loading="lazy"
-              />
-            </picture>
-          </div>
+        <div class="service-detail-item" id="servico-pinturas">
           <div class="service-detail-content">
-            <span class="service-detail-num">01 — Pintura predial</span>
+            <span class="service-detail-num">01 — Pinturas Prediais</span>
             <h3>Fachadas, áreas comuns e trabalho em altura</h3>
+            <p class="service-detail-subtitle"><em>Externas e internas.</em></p>
             <p>
               Cuidamos de fachadas, halls de entrada, garagens e escadarias com equipe certificada
               para trabalho em altura e equipamentos próprios — sem depender de terceiros nem
@@ -552,6 +602,10 @@
               </li>
               <li>
                 <svg><use href="#icon-check" /></svg>
+                Tintas Suvinil, Coral e Sherwin-Williams
+              </li>
+              <li>
+                <svg><use href="#icon-check" /></svg>
                 Cronograma por blocos ou torres, sem parar a rotina do prédio
               </li>
             </ul>
@@ -562,139 +616,187 @@
               >Pedir orçamento de pintura predial</a
             >
           </div>
+          <div class="service-detail-photos photos-2x2">
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/trabalho-predial.webp" type="image/webp" />
+                <img
+                  src="/images/trabalho-predial.jpg"
+                  alt="Fachada de prédio residencial pintada"
+                  width="1000"
+                  height="1334"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/trabalho-residencial.webp" type="image/webp" />
+                <img
+                  src="/images/trabalho-residencial.jpg"
+                  alt="Fachada residencial com sacadas e acabamento pintado pela W.C Pintura"
+                  width="1000"
+                  height="667"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/trabalho-textura.webp" type="image/webp" />
+                <img
+                  src="/images/trabalho-textura.jpg"
+                  alt="Detalhe de acabamento em grafiato aplicado pela W.C Pintura"
+                  width="1000"
+                  height="698"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/trabalho-interior.webp" type="image/webp" />
+                <img
+                  src="/images/trabalho-interior.jpg"
+                  alt="Área externa coberta com pintura branca impecável"
+                  width="1400"
+                  height="788"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
         </div>
 
-        <div class="service-detail-item" id="servico-residencial">
-          <div class="service-detail-media">
-            <picture>
-              <source srcset="/images/trabalho-residencial.webp" type="image/webp" />
-              <img
-                src="/images/trabalho-residencial.jpg"
-                alt="Casa residencial com pintura externa"
-                width="1000"
-                height="667"
-                loading="lazy"
-              />
-            </picture>
+        <div class="service-detail-item" id="servico-hidrojateamento">
+          <div class="service-detail-photos">
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/servico-hidro-altura.webp" type="image/webp" />
+                <img
+                  src="/images/servico-hidro-altura.jpg"
+                  alt="Profissional com acesso por corda (NR-35) realizando trabalho em fachada predial"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/servico-hidro-resultado.webp" type="image/webp" />
+                <img
+                  src="/images/servico-hidro-resultado.jpg"
+                  alt="Fachada predial limpa e pintada após serviço da W.C Pintura"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
           <div class="service-detail-content">
-            <span class="service-detail-num">02 — Pintura residencial</span>
-            <h3>Casas e apartamentos, do quarto à fachada</h3>
+            <span class="service-detail-num">02 — Hidrojateamento e Limpeza</span>
+            <h3>Superfícies limpas antes de qualquer acabamento</h3>
+            <p class="service-detail-subtitle">
+              <em>Utilizamos lavadora de alta pressão com aplicação água e sabão biodegradável.</em>
+            </p>
             <p>
-              Cores sob medida e tintas de primeira linha (Suvinil, Coral e Sherwin-Williams), com o
-              mesmo cuidado em cada cômodo — interno ou externo.
+              Removemos sujeira, mofo e poluição acumulada em fachadas e revestimentos, preparando a
+              superfície ideal para receber pintura, textura ou impermeabilização.
             </p>
             <ul class="service-detail-list">
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Consultoria de cores e acabamento antes de começar
+                Remoção de sujeira, mofo e poluição da fachada
               </li>
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Proteção de móveis, pisos e esquadrias
+                Lavadora de alta pressão profissional
               </li>
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Pequenos reparos em trincas e furos já inclusos
+                Produtos biodegradáveis, sem dano ao revestimento
+              </li>
+              <li>
+                <svg><use href="#icon-check" /></svg>
+                Preparação ideal da superfície antes da pintura
               </li>
             </ul>
             <a
               href="#"
               class="btn btn-primary js-whatsapp"
-              data-msg="Olá! Gostaria de um orçamento de pintura residencial."
-              >Pedir orçamento de pintura residencial</a
+              data-msg="Olá! Tenho interesse em hidrojateamento e limpeza de revestimentos."
+              >Pedir orçamento de limpeza</a
             >
           </div>
         </div>
 
-        <div class="service-detail-item" id="servico-textura">
-          <div class="service-detail-media">
-            <picture>
-              <source srcset="/images/trabalho-textura.webp" type="image/webp" />
-              <img
-                src="/images/trabalho-textura.jpg"
-                alt="Aplicação de textura em parede"
-                width="1000"
-                height="698"
-                loading="lazy"
-              />
-            </picture>
-          </div>
+        <div class="service-detail-item" id="servico-tratamento">
           <div class="service-detail-content">
-            <span class="service-detail-num">03 — Textura e efeitos</span>
-            <h3>Grafiato, cimento queimado e acabamentos decorativos</h3>
-            <p>
-              Texturas e efeitos que dão personalidade à parede — e ainda ajudam a disfarçar
-              pequenas imperfeições da superfície.
-            </p>
-            <ul class="service-detail-list">
-              <li>
-                <svg><use href="#icon-check" /></svg>
-                Amostra da textura aplicada antes de fechar o serviço
-              </li>
-              <li>
-                <svg><use href="#icon-check" /></svg>
-                Grafiato, riscado, cimento queimado e marmorizado
-              </li>
-              <li>
-                <svg><use href="#icon-check" /></svg>
-                Acabamento resistente a sol, chuva e maresia
-              </li>
-            </ul>
-            <a
-              href="#"
-              class="btn btn-primary js-whatsapp"
-              data-msg="Olá! Tenho interesse em textura/efeito especial para minha parede."
-              >Pedir orçamento de textura</a
-            >
-          </div>
-        </div>
-
-        <div class="service-detail-item" id="servico-preparacao">
-          <div class="service-detail-media">
-            <picture>
-              <source srcset="/images/trabalho-interior.webp" type="image/webp" />
-              <img
-                src="/images/trabalho-interior.jpg"
-                alt="Sala de estar com pintura interna"
-                width="1400"
-                height="788"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-          <div class="service-detail-content">
-            <span class="service-detail-num">04 — Preparação e tratamento</span>
+            <span class="service-detail-num">03 — Tratamento de Superfícies</span>
             <h3>A base é o que garante a durabilidade</h3>
+            <p class="service-detail-subtitle">
+              <em>Correção completa antes de qualquer acabamento.</em>
+            </p>
             <p>
-              Antes da primeira demão, tratamos a superfície: limpeza, correção de trincas, selador
+              Antes da primeira demão, tratamos a superfície: correção de trincas, rejunte, selador
               e impermeabilização — o passo que a maioria das pinturas pula.
             </p>
             <ul class="service-detail-list">
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Lavagem e remoção de mofo ou fungos
+                Correção de trincas, bolhas e infiltrações
               </li>
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Correção de trincas, furos e imperfeições
+                Selador e fundo preparador adequado a cada superfície
               </li>
               <li>
                 <svg><use href="#icon-check" /></svg>
-                Selador, fundo preparador e impermeabilização
+                Rejunte e impermeabilização de pontos críticos
+              </li>
+              <li>
+                <svg><use href="#icon-check" /></svg>
+                Base garantida para durabilidade do acabamento
               </li>
             </ul>
             <a
               href="#"
               class="btn btn-primary js-whatsapp"
-              data-msg="Olá! Gostaria de saber mais sobre preparação e tratamento de superfície."
-              >Pedir orçamento de preparação</a
+              data-msg="Olá! Gostaria de saber mais sobre tratamento de superfície, rejunte e impermeabilização."
+              >Pedir orçamento de tratamento</a
             >
+          </div>
+          <div class="service-detail-photos">
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/sobre-pintura.webp" type="image/webp" />
+                <img
+                  src="/images/sobre-pintura.jpg"
+                  alt="Detalhe de parede sendo pintada com rolo"
+                  width="1000"
+                  height="1300"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="service-detail-media">
+              <picture>
+                <source srcset="/images/servico-tratamento-predial.webp" type="image/webp" />
+                <img
+                  src="/images/servico-tratamento-predial.jpg"
+                  alt="Fachada predial antes do tratamento, com trinca visível na alvenaria"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- TRABALHOS (PORTFÓLIO) -->
       <section class="section works-section" id="trabalhos">
         <div class="works-header">
           <div>
@@ -738,7 +840,7 @@
               <source srcset="/images/trabalho-residencial.webp" type="image/webp" />
               <img
                 src="/images/trabalho-residencial.jpg"
-                alt="Casa residencial com pintura externa"
+                alt="Fachada residencial com sacadas e acabamento pintado pela W.C Pintura"
                 width="1000"
                 height="667"
                 loading="lazy"
@@ -758,7 +860,7 @@
               <source srcset="/images/trabalho-textura.webp" type="image/webp" />
               <img
                 src="/images/trabalho-textura.jpg"
-                alt="Aplicação de textura em parede"
+                alt="Detalhe de acabamento em grafiato aplicado pela W.C Pintura"
                 width="1000"
                 height="698"
                 loading="lazy"
@@ -771,14 +873,34 @@
           </a>
           <a
             href="#"
-            class="work-item large work-interior js-whatsapp"
+            class="work-item work-acao js-whatsapp"
+            data-msg="Olá! Vi as fotos do serviço de vocês em andamento e gostaria de um orçamento."
+          >
+            <picture>
+              <source srcset="/images/trabalho-acao.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-acao.jpg"
+                alt="Pintor da equipe W.C Pintura em serviço de pintura predial com acesso por escada"
+                width="1000"
+                height="750"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Em execução</span>
+              <h3>Nossa Equipe em Ação</h3>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="work-item work-interior js-whatsapp"
             data-msg="Olá! Gostaria de um orçamento para pintura interna."
           >
             <picture>
               <source srcset="/images/trabalho-interior.webp" type="image/webp" />
               <img
                 src="/images/trabalho-interior.jpg"
-                alt="Sala de estar com pintura interna"
+                alt="Área externa coberta com pintura branca impecável"
                 width="1400"
                 height="788"
                 loading="lazy"
@@ -787,13 +909,32 @@
             <div class="work-overlay">
               <span class="work-tag">Interiores</span>
               <h3>Salas e Ambientes</h3>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="work-item large work-fachada js-whatsapp"
+            data-msg="Olá! Vi a fachada clássica que vocês pintaram e gostaria de um orçamento."
+          >
+            <picture>
+              <source srcset="/images/trabalho-fachada.webp" type="image/webp" />
+              <img
+                src="/images/trabalho-fachada.jpg"
+                alt="Fachada clássica com sacada e balaustrada pintada pela W.C Pintura"
+                width="1000"
+                height="1300"
+                loading="lazy"
+              />
+            </picture>
+            <div class="work-overlay">
+              <span class="work-tag">Fachadas</span>
+              <h3>Estilo Clássico</h3>
               <span class="work-arrow">Pedir orçamento →</span>
             </div>
           </a>
         </div>
       </section>
 
-      <!-- ANTES E DEPOIS -->
       <section class="section before-after-section" id="antes-depois">
         <div class="ba-header">
           <span class="section-tag">O impacto de uma boa pintura</span>
@@ -859,7 +1000,6 @@
         </div>
       </section>
 
-      <!-- DIFERENCIAIS -->
       <section class="section diff-section" id="diferenciais">
         <div class="paint-drips">
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -992,7 +1132,6 @@
         </div>
       </section>
 
-      <!-- COMO FUNCIONA -->
       <section class="section process-section" id="processo">
         <div class="process-header">
           <span class="section-tag">Como funciona</span>
@@ -1048,7 +1187,6 @@
         </div>
       </section>
 
-      <!-- FAQ -->
       <section class="section faq-section" id="faq">
         <div class="faq-header">
           <span class="section-tag">Dúvidas frequentes</span>
@@ -1123,7 +1261,6 @@
         </div>
       </section>
 
-      <!-- DEPOIMENTOS -->
       <section class="section testimonials-section" id="depoimentos">
         <div class="test-header">
           <span class="section-tag">Depoimentos</span>
@@ -1179,7 +1316,6 @@
         </div>
       </section>
 
-      <!-- CTA -->
       <section class="cta-section" id="contato">
         <div class="cta-bg-text">PINTURA</div>
         <div class="cta-content">
@@ -1269,7 +1405,6 @@
       </div>
     </footer>
 
-    <!-- WHATSAPP FAB -->
     <a
       href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
       class="whatsapp-fab js-whatsapp"

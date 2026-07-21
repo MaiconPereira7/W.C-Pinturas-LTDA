@@ -1,6 +1,7 @@
-/* ── FAQ ── */
 .faq-section {
-  background: var(--white);
+  background: var(--grad-light);
+  background-size: 300% 300%;
+  animation: bgFlow 26s ease-in-out infinite;
 }
 .faq-header {
   max-width: 1200px;
@@ -63,4 +64,5 @@
   color: var(--text-sec);
   font-size: 0.95rem;
   line-height: 1.7;
+  overflow: hidden;
 }
