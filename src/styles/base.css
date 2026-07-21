@@ -70,7 +70,7 @@ body.custom-cursor-active .diff-card,
 body.custom-cursor-active .test-card,
 body.custom-cursor-active .whatsapp-fab,
 body.custom-cursor-active .faq-item summary,
-body.custom-cursor-active .ba-range {
+body.custom-cursor-active .palette-card {
   cursor: none;
 }
 
@@ -231,7 +231,7 @@ button:focus-visible {
   .services-section,
   .services-detail-section,
   .works-section,
-  .before-after-section,
+  .palette-section,
   .diff-section,
   .process-section,
   .faq-section,

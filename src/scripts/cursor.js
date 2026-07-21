@@ -31,7 +31,7 @@ export function initCursor(reduceMotion) {
 
   document
     .querySelectorAll(
-      'a, button, .service-card, .diff-card, .test-card, .faq-item summary, .ba-range'
+      'a, button, .service-card, .diff-card, .test-card, .faq-item summary, .palette-card'
     )
     .forEach((el) => {
       el.addEventListener('mouseenter', () => cursor.classList.add('hover'));

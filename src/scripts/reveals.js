@@ -122,15 +122,16 @@ export function initScrollReveals(reduceMotion) {
     ease: 'power3.out',
   });
 
-  revealFrom(reduceMotion, '.ba-slider', {
-    scrollTrigger: { trigger: '.ba-slider', start: 'top 85%' },
+  revealFrom(reduceMotion, '.palette-card', {
+    scrollTrigger: { trigger: '.palette-grid', start: 'top 85%' },
     y: 40,
     opacity: 0,
-    duration: 0.8,
+    duration: 0.7,
+    stagger: 0.1,
     ease: 'power3.out',
   });
-  revealFrom(reduceMotion, '.ba-header > *', {
-    scrollTrigger: { trigger: '.ba-header', start: 'top 85%' },
+  revealFrom(reduceMotion, '.palette-header > *', {
+    scrollTrigger: { trigger: '.palette-header', start: 'top 85%' },
     y: 40,
     opacity: 0,
     duration: 0.7,

@@ -16,7 +16,6 @@ import {
   initSmoothScroll,
   initRipple,
 } from './interactions.js';
-import { initBeforeAfter } from './before-after.js';
 import { initCounters } from './counters.js';
 import { initTextReveals } from './text-reveal.js';
 import { initParallax } from './parallax.js';
@@ -33,7 +32,6 @@ initScrollReveals(reduceMotion);
 initTiltAndMagnetic(reduceMotion);
 initFabEntrance(reduceMotion);
 initSmoothScroll();
-initBeforeAfter();
 initCounters(reduceMotion);
 initTextReveals(reduceMotion);
 initParallax(reduceMotion);
