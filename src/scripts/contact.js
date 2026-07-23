@@ -1,6 +1,6 @@
 export const CONTACT = {
-  whatsapp: '5511999999999',
-  email: 'contato@wcpintura.com.br',
+  whatsapp: '5511948120030',
+  email: 'contatowcpinturasltda@gmail.com',
   instagram: '',
 };
 
