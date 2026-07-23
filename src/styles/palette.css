@@ -34,16 +34,14 @@
 }
 .palette-swatches {
   display: flex;
-  gap: 2px;
+  gap: 6px;
   margin-bottom: 1.3rem;
-  border-radius: 10px;
-  overflow: hidden;
   height: 56px;
-  background: rgba(0, 0, 0, 0.14);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 .palette-swatch {
   flex: 1;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
 }
 .palette-card h3 {
   font-size: 1.1rem;
