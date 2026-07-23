@@ -1,7 +1,7 @@
 export const CONTACT = {
   whatsapp: '5511948120030',
   email: 'contatowcpinturasltda@gmail.com',
-  instagram: '',
+  instagram: 'https://www.instagram.com/w.cpinturasltda/',
 };
 
 export function wireContactLinks() {
