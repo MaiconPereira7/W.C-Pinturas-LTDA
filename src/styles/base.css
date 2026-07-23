@@ -209,7 +209,8 @@ body.custom-cursor-active .palette-card {
 .process-header .section-sub,
 .faq-header .section-sub,
 .test-header .section-sub,
-.services-detail-header .section-sub {
+.services-detail-header .section-sub,
+.palette-header .section-sub {
   margin: 0 auto;
 }
 
